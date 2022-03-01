@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { NavbarContextProvider } from "./contexts/NavbarContext";
+import { BrowserRouter } from "react-router-dom";
+import { RestaurantNeatYouContextProvider } from "./contexts/RestaurantNeatYouContext";
+import { LogInContextProvider } from "./contexts/LogInContext";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<BrowserRouter>
+			<LogInContextProvider>
+				<NavbarContextProvider>
+					<RestaurantNeatYouContextProvider>
+						<App />
+					</RestaurantNeatYouContextProvider>
+				</NavbarContextProvider>
+			</LogInContextProvider>
+		</BrowserRouter>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,46 @@
+.homeDineoutImg {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2021/Mar/31/oldherobannerwebfinal_bau.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 450px;
+	height: 400px;
+}
+
+.homeDineoutImgText {
+	margin-top: -270px;
+	text-align: center;
+	color: white;
+	font-size: 35px;
+}
+
+.homeDineoutImgSearchField {
+	display: flex;
+	text-align: center;
+	color: white;
+	width: 90%;
+	height: 60px;
+	margin: auto;
+	outline: none;
+	background-color: white;
+	align-items: center;
+	border-radius: 4px;
+}
+.searchIconColor {
+	color: red;
+	padding: 10px;
+}
+
+.inputSearchBtn {
+	margin: 15px;
+	padding: 10px 30px;
+	background-color: #FF645A;
+	color: white;
+	border: 0;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.inputSearchBtn:hover {
+	background-color: red;
+}

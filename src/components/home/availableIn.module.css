@@ -1,0 +1,77 @@
+.availableInHeading {
+    color: #FF645A;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 80px;
+    padding-left: 60px;
+    letter-spacing:1px;
+    margin-bottom: 10px;
+}
+
+.availableOrangeLine {
+    border-bottom: 2px solid red;
+    width: 0.1vh; 
+    padding-left: 60px;
+    margin-left: 60px;
+    align-items: left;
+    text-align: left; 
+    margin-bottom: 15px;
+}
+.availableLinkMain {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+}
+.availableLinkAllPlces {
+    margin-bottom: 13px;
+    font-size: 15px;
+    color: #999999;
+    text-decoration: none;
+}
+.availableLinkAllPlces:hover {
+    color: #666666;
+}
+.datttMain {
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 90%;
+    margin: auto;
+}
+.availableInHeading2 {
+    color: #FF645A;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 80px;
+    letter-spacing:1px;
+    margin-bottom: 10px;
+}
+.discoverMain {
+    display: flex;
+    flex-direction: column;
+}
+.availableOrangeLine2 {
+    border-bottom: 2px solid red;
+    width: 0.1vh; 
+    padding-left: 60px;
+    align-items: left;
+    text-align: left; 
+    margin-bottom: 15px;
+}
+
+.linkRes {
+    margin-bottom: 13px;
+    color: #999999;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.linkRes:hover {
+    color: #666666;
+}
+
+.footer {
+    align-items: center;
+    text-align: center;
+}
