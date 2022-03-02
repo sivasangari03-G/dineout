@@ -1,7 +1,11 @@
 import React from 'react'
+import { DropDownNavbar } from '../navbar/DropDownNavbar';
 
 export const Events = () => {
   return (
-    <div>Events</div>
-  )
+		<div>
+			<DropDownNavbar />
+			Events
+		</div>
+  );
 }

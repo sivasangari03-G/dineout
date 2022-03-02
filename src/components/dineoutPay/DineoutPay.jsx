@@ -1,7 +1,11 @@
 import React from 'react'
+import { DropDownNavbar } from '../navbar/DropDownNavbar';
 
 export const DineoutPay = () => {
   return (
-    <div>DineoutPay</div>
-  )
+		<div>
+			<DropDownNavbar />
+			DineoutPay
+		</div>
+  );
 }

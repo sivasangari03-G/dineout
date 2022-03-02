@@ -1,7 +1,11 @@
 import React from 'react'
+import { DropDownNavbar } from '../navbar/DropDownNavbar';
 
 export const Blog = () => {
   return (
-    <div>Blog</div>
-  )
+		<div>
+			<DropDownNavbar />
+			Blog
+		</div>
+  );
 }

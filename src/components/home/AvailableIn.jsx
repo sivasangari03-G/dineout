@@ -240,7 +240,7 @@ export const AvailableIn = () => {
 							/>
 						</Link>
 					</div>
-					<div style={{marginTop: "10px",marginBottom: "30px"}}>
+					<div style={{marginTop: "0px",marginBottom: "30px"}}>
 						<Link to="/" className={styles.findResAndOffersLink}>
 							© 2017, dineout.co.in. All Rights Reserved.
 						</Link>
