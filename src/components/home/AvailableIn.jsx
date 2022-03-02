@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./availableIn.module.css";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 export const AvailableIn = () => {
 	return (
 		<div>
@@ -190,23 +194,54 @@ export const AvailableIn = () => {
 				<div className={styles.footer}>
 					<div>
 						<img
+							className={styles.footerDineOutImg}
 							src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png"
 							alt=""
 						/>
 					</div>
-					<div>
-						<Link to="/">
+					<div className={styles.findResAndOffers}>
+						<Link to="/" className={styles.findResAndOffersLink}>
 							Find the best Restaurants, Deals, Discounts & Offers
 						</Link>
 					</div>
 					<div>
-						<div>Contact:+91-9212340202</div>
+						<div className={styles.contact}>
+							Contact:
+							<span style={{ color: "#666", fontWeight: "bold" }}>
+								+91-9212340202
+							</span>
+						</div>
 					</div>
-                    <div>
-                        
-                    </div>
-					<div>
+					<div style={{ marginTop: "10px" }}>
 						<Link to="/">
+							<FacebookRoundedIcon
+								sx={{ fontSize: 35 }}
+								className={styles.footerIconsfb}
+							/>
+						</Link>
+						<Link to="/">
+							<YouTubeIcon
+								sx={{
+									fontSize: 35,
+								}}
+								className={styles.footerIconsyt}
+							/>
+						</Link>
+						<Link to="/">
+							<InstagramIcon
+								sx={{ fontSize: 35 }}
+								className={styles.footerIconsinsta}
+							/>
+						</Link>
+						<Link to="/">
+							<TwitterIcon
+								sx={{ fontSize: 35 }}
+								className={styles.footerIconstwit}
+							/>
+						</Link>
+					</div>
+					<div style={{marginTop: "10px",marginBottom: "30px"}}>
+						<Link to="/" className={styles.findResAndOffersLink}>
 							© 2017, dineout.co.in. All Rights Reserved.
 						</Link>
 					</div>
