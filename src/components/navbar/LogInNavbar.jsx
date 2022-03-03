@@ -8,14 +8,35 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
+import { LogOut } from "./LogOut";
+
 export const LogInNavbar = () => {
-	const { open, handleOpen, handleClose } = useContext(LogInContext);
-	const handleModelContinue = () => {};
+	const {
+		open,
+		handleOpen,
+		handleClose,
+		logInWithNum,
+		handleLogInWithNum,
+		handleModelContinue,
+	} = useContext(LogInContext);
+
+	let isLoggedIn = JSON.parse(localStorage.getItem("value"));
+	
 	return (
 		<div>
-			<button className={styles.navbarLoginButton} onClick={handleOpen}>
-				Login
-			</button>
+			{isLoggedIn === true ? (
+				<>
+					<LogOut />
+				</>
+			) : (
+				<button
+					className={styles.navbarLoginButton}
+					onClick={handleOpen}
+				>
+					Login
+				</button>
+			)}
+
 			<Modal open={open}>
 				<Paper className={styles.loginModel}>
 					<div>
@@ -32,6 +53,8 @@ export const LogInNavbar = () => {
 						</div>
 						<div className={styles.inputfield}>
 							<TextField
+								value={logInWithNum}
+								onChange={handleLogInWithNum}
 								id="standard-basic"
 								label="Enter Mobile Number or Email"
 								variant="standard"

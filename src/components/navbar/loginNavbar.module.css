@@ -22,7 +22,7 @@
 	width: 30%;
 	margin: 5% auto;
 	padding: 0 30px;
-    border-radius: 6px;
+	border-radius: 6px;
 }
 
 .modelSignInButtonMain {
@@ -35,7 +35,6 @@
 	padding-top: 37px;
 	font-weight: bold;
 	color: #ff645a;
-
 }
 
 .closeButton {
@@ -57,7 +56,6 @@
 }
 .inputfield:focus {
 	color: black !important;
-
 }
 
 .handleModelContinueBtn {
@@ -82,7 +80,6 @@
 	padding-left: 18px;
 	padding-right: 18px;
 	font-size: 15px;
-
 }
 
 .btnWithIconMain {
@@ -90,3 +87,4 @@
 	margin-top: 20px;
 	gap: 15px;
 }
+
