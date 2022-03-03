@@ -5,6 +5,7 @@ import { HomePageImg } from "./HomePageImg";
 import { RestaurantNearYou } from "./RestaurantNearYou";
 import { Navbar } from "../navbar/Navbar";
 import { AvailableIn } from "./AvailableIn";
+import { EightFacility } from "./EightFacility";
 export const Home = () => {
   const resData = useContext(RestaurantNeatYouContext);
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
       <HomePageImg />
       <BestOffers />
       {resData && <RestaurantNearYou />}
+      <EightFacility />
       <AvailableIn />
     </div>
   );
