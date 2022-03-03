@@ -9,7 +9,7 @@ import { SuperSaver } from "../components/superSaver/SuperSaver";
 import { DineOutPassport } from "../components/dineoutPassport/DineOutPassport";
 import { Details } from "../components/DetailsPage/Details";
 import { Cart } from "../components/Cart/Cart";
-import ResturantHome from "../ComponentsR/Resaurants/ResturantHome";
+// import ResturantHome from "../ComponentsR/Resaurants/ResturantHome";
 export const NavbarRouterComponent = () => {
   return (
     <div>
