@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import styles from "./getToKnow.module.css";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export const EachQues = ({que, ans }) => {
     const [isClicked, setIsClicked] = useState(false);
@@ -14,7 +15,7 @@ export const EachQues = ({que, ans }) => {
 					{que}
 				</div>
 				<button onClick={handleQues} className={styles.WDineOutBtn}>
-					^
+					<KeyboardArrowDownIcon />
 				</button>
 			</div>
 			<div>

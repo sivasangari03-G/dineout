@@ -12,3 +12,42 @@
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+
+.bgImg1Mem1,
+.bgImg1Mem2,
+.bgImg1Mem3,
+.bgImg1Mem4,
+.bgImg1Mem5 {
+	margin-top: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: red;
+	height: 220px;
+	width: 98%;
+	border-radius: 20px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.bgImg1Mem1 {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/001_cashback.jpg");
+}
+.bgImg1Mem2 {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/total-bill.jpg");
+	/* display: none; */
+}
+.bgImg1Mem3 {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/buffet.jpg");
+}
+
+.bgImg1Mem4 {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/hotels123.jpg");
+	/* display: none; */
+}
+.bgImg1Mem5 {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/experiences_-_without_unit.jpeg");
+}
+.bgImg1Mem6 {
+	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/experiences_-_without_unit.jpeg");
+	/* display: none; */
+}
