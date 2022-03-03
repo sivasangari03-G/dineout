@@ -1,0 +1,8 @@
+.cartForm {
+  z-index: 10;
+  position: sticky;
+  top: 135px;
+  border: 2px solid black;
+  margin-right: 20px;
+  height: 500px;
+}
