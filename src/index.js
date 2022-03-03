@@ -10,24 +10,27 @@ import { NavbarContextProvider } from "./contexts/NavbarContext";
 import { BrowserRouter } from "react-router-dom";
 import { RestaurantNeatYouContextProvider } from "./contexts/RestaurantNeatYouContext";
 import { LogInContextProvider } from "./contexts/LogInContext";
+import { FeaturedResContextProvider } from "./contexts/FeaturedResContext";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <LogInContextProvider>
-        <NavbarContextProvider>
-          <RestaurantNeatYouContextProvider>
-            <Provider store={store_}>
-              <Provider store={store}>
-                <App />
-              </Provider>
-            </Provider>
-          </RestaurantNeatYouContextProvider>
-        </NavbarContextProvider>
-      </LogInContextProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<BrowserRouter>
+			<LogInContextProvider>
+				<NavbarContextProvider>
+					<RestaurantNeatYouContextProvider>
+						<FeaturedResContextProvider>
+							<Provider store={store_}>
+								<Provider store={store}>
+									<App />
+								</Provider>
+							</Provider>
+						</FeaturedResContextProvider>
+					</RestaurantNeatYouContextProvider>
+				</NavbarContextProvider>
+			</LogInContextProvider>
+		</BrowserRouter>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
