@@ -1,4 +1,5 @@
 import React from "react";
+import ResturantHome from "./ResturantHome"
 import { DropDownNavbar } from "../navbar/DropDownNavbar";
 
 export const BookATable = () => {
@@ -6,7 +7,7 @@ export const BookATable = () => {
     <div>
       <DropDownNavbar />
 
-      {/* <ResturantHome /> */}
+      <ResturantHome />
     </div>
   );
 };
