@@ -62,21 +62,10 @@ export const Navbar = () => {
 					</Link>
 				</div>
 				<div>
-					<Link className={styles.anchorNavbar} to="/events">
-						Events
-					</Link>
-				</div>
-				<div>
 					<Link className={styles.anchorNavbar} to="/supersaver">
 						Super Saver
 					</Link>
 				</div>
-				<div>
-					<Link className={styles.anchorNavbar} to="/blog">
-						Blog
-					</Link>
-				</div>
-				{/* <button className={styles.navbarLoginButton}>Login</button> */}
 				<LogInNavbar />
 			</div>
 		</React.Fragment>

@@ -92,21 +92,13 @@ export const DropDownNavbar = () => {
 						Dineout Passport
 					</NavLink>
 				</div>
-				<div>
-					<NavLink className={styles.anchorNavbar} to="/events">
-						Events
-					</NavLink>
-				</div>
+
 				<div>
 					<NavLink className={styles.anchorNavbar} to="/supersaver">
 						Super Saver
 					</NavLink>
 				</div>
-				<div>
-					<NavLink className={styles.anchorNavbar} to="/blog">
-						Blog
-					</NavLink>
-				</div>
+
 			</div>
 			<div className={styles.shadowLine2}></div>
 		</div>
