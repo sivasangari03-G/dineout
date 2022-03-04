@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store/index";
-import { store_ } from "./Redux/store";
+
 import reportWebVitals from "./reportWebVitals";
 import { NavbarContextProvider } from "./contexts/NavbarContext";
 import { BrowserRouter } from "react-router-dom";
@@ -13,24 +13,22 @@ import { LogInContextProvider } from "./contexts/LogInContext";
 import { FeaturedResContextProvider } from "./contexts/FeaturedResContext";
 
 ReactDOM.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<LogInContextProvider>
-				<NavbarContextProvider>
-					<RestaurantNeatYouContextProvider>
-						<FeaturedResContextProvider>
-							<Provider store={store_}>
-								<Provider store={store}>
-									<App />
-								</Provider>
-							</Provider>
-						</FeaturedResContextProvider>
-					</RestaurantNeatYouContextProvider>
-				</NavbarContextProvider>
-			</LogInContextProvider>
-		</BrowserRouter>
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <BrowserRouter>
+      <LogInContextProvider>
+        <NavbarContextProvider>
+          <RestaurantNeatYouContextProvider>
+            <FeaturedResContextProvider>
+              <Provider store={store}>
+                <App />
+              </Provider>
+            </FeaturedResContextProvider>
+          </RestaurantNeatYouContextProvider>
+        </NavbarContextProvider>
+      </LogInContextProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
