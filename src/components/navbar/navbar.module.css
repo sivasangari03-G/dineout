@@ -1,6 +1,8 @@
 .navbarMain {
 	display: flex;
-	width: 90%;
+	/* border: 1px solid black; */
+	width: 95%;
+	justify-content: center;
 	margin: auto;
 	padding: 15px;
 	gap: 20px;

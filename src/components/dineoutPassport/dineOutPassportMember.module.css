@@ -49,3 +49,17 @@
 .bgImg1Mem5 {
 	background-image: url("https://im1.dineout.co.in/images/uploads/misc/2022/Jan/19/experiences_-_without_unit.jpeg");
 }
+
+.cashback {
+	color: white;
+	text-align: center;
+	font-size: 22px;
+	padding-top: 50px;
+	font-weight: bold;
+}
+
+.promocode {
+	color: white;
+	text-align: center;
+	padding: 10px;
+}

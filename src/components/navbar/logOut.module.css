@@ -1,6 +1,6 @@
 .myAcnt {
 	color: rgba(0, 0, 0, 0.767);
-	padding-right: 5px;
+	padding-left: 10px;
 }
 
 .myAcntBtn {
@@ -61,4 +61,15 @@
 	text-decoration: underline;
 	background-color: rgb(212, 211, 211);
 	cursor: pointer;
+}
+
+.ss {
+	border: 1px solid #FF645A;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	padding: 7px;
+	border-radius: 50%;
+	color: #FF645A;
+	background-color: rgba(255,88,84,0.12);
 }
