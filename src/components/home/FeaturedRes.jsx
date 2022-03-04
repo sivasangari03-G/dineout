@@ -34,7 +34,7 @@ export const FeaturedRes = () => {
 				<Slider {...settings}>
 					{data.map((elem) => {
 						return (
-							<div>
+							<div key={elem.id}>
 								<Link to="/" className={styles.featuredLink}>
 									<div
 										key={elem.id}
