@@ -6,68 +6,62 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const LogOut = () => {
-	const { handleLogOutBtn, data } = useContext(LogInContext);
-	const [dropIssue, setDropIssue] = useState(false);
-	const navigateToCart = useNavigate();
+  const { handleLogOutBtn, data } = useContext(LogInContext);
+  const [dropIssue, setDropIssue] = useState(false);
+  const navigateToCart = useNavigate();
 
-	useEffect(() => {
-		console.log();
-	}, [handleLogOutBtn, data]);
+  useEffect(() => {
+    console.log();
+  }, [handleLogOutBtn, data]);
 
-	const handleDropIssue = () => {
-		setDropIssue(!dropIssue);
-	};
-	const handleNavigateToCart = () => {
-		navigateToCart("./cart");
-	};
+  const handleDropIssue = () => {
+    setDropIssue(!dropIssue);
+  };
+  const handleNavigateToCart = () => {
+    navigateToCart("/cart");
+  };
 
-	return (
-		<div>
-			<div
-				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				<div className={styles.myAcnt}>My Account</div>
-				<div>
-					<div className={styles.dropdown}>
-						<span>
-							<button
-								className={styles.myAcntBtn}
-								onClick={handleDropIssue}
-							>
-								<ArrowDropDownIcon />
-							</button>
-						</span>
+  return (
+    <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div className={styles.myAcnt}>My Account</div>
+        <div>
+          <div className={styles.dropdown}>
+            <span>
+              <button className={styles.myAcntBtn} onClick={handleDropIssue}>
+                <ArrowDropDownIcon />
+              </button>
+            </span>
 
-						{dropIssue === true ? (
-							<>
-								<div
-									className={styles.dropdownContent}
-									style={{ visibility: "visible" }}
-								>
-									<button
-										className={styles.loProfile}
-										onClick={handleNavigateToCart}
-									>
-										Profile
-									</button>
-									<button
-										className={styles.loLogOut}
-										onClick={handleLogOutBtn}
-									>
-										Logout
-									</button>
-								</div>
-							</>
-						) : (
-							<div></div>
-						)}
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+            {dropIssue === true ? (
+              <>
+                <div
+                  className={styles.dropdownContent}
+                  style={{ visibility: "visible" }}
+                >
+                  <button
+                    className={styles.loProfile}
+                    onClick={handleNavigateToCart}
+                  >
+                    Profile
+                  </button>
+                  <button className={styles.loLogOut} onClick={handleLogOutBtn}>
+                    Logout
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div></div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
