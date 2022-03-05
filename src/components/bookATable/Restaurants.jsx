@@ -5,6 +5,8 @@ import { get_data, set_city, set_cuisine_filter, set_loading, set_max_page, set_
 import style from "./Restaurants.module.css"
 import Restaurant from "./Restaurant"
 import Skeleton from 'react-loading-skeleton'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+
 
 
 const Restaurants = ({ city }) => {
@@ -79,16 +81,24 @@ const Restaurants = ({ city }) => {
     const ShowData = () => {
         return (
             <>
-                <h1>Best Restaurants Near Me in {city} ({total})</h1>
-                <div className={style.sort_dropdown_div}>
-                    Sort By :&nbsp;
-                    <select className={style.sort_dropdown} value={sort} onChange={(e) => { dispatch(set_sort(e.target.value)); localStorage.setItem("sort", e.target.value) }}>
-                        <option value=""></option>
-                        <option value="rating&_order=desc">Popularity- high to low</option>
-                        <option value="rating&_order=asc">Popularity- low to high</option>
-                        <option value="name">Name</option>
-                    </select>
+                <div className={style.upperlinks}>
+                    Dineout <MdKeyboardArrowRight fill="black"/> {city} <MdKeyboardArrowRight fill="black"/> {city} Restaurant {!quick_filter ==""?  quick_filter==="dineoutpay"? <span><MdKeyboardArrowRight fill="black"/>Dineout pay</span>: <span><MdKeyboardArrowRight fill="black"/>Super Savers</span>: ``}
+                </div>
 
+
+                <div className={style.topheading}>
+
+                    <h2>Best {quick_filter.charAt(0).toUpperCase() + quick_filter.slice(1)} Restaurants Near Me in {city} <span>({total})</span></h2>
+                    <div className={style.sort_dropdown_div}>
+                        Sort By :&nbsp;
+                        <select className={style.sort_dropdown} value={sort} onChange={(e) => { dispatch(set_sort(e.target.value)); localStorage.setItem("sort", e.target.value) }}>
+                            <option value=""></option>
+                            <option value="rating&_order=desc">Popularity- high to low</option>
+                            <option value="rating&_order=asc">Popularity- low to high</option>
+                            <option value="name">Name</option>
+                        </select>
+
+                    </div>
                 </div>
                 <div className={style.filter_dropdown_div}>
                     Cuisine : &nbsp;
@@ -109,7 +119,7 @@ const Restaurants = ({ city }) => {
                         <option value="Bar">Bar</option>
                         <option value="Lounge">Lounge</option>
                         <option value="Casual Dining">Casual Dining</option>
-                        
+
                     </select>
                 </div>
 
@@ -119,7 +129,7 @@ const Restaurants = ({ city }) => {
                     })}
                 </div>
                 <div className={style.pageBtns}>
-                    <button className={style.prebtn} disabled={page === 1 ? true : false} onClick={() => { dispatch(set_page(page - 1)); localStorage.setItem("page", page - 1) }} >   Previous</button>{<Pagination />}<button className={style.nextbtn} disabled={page === maxpage ? true : false} onClick={() => { dispatch(set_page(page + 1)); localStorage.setItem("page", page + 1) }} >Next</button>
+                    <button className={style.prebtn} disabled={page === 1 ? true : false} onClick={() => { dispatch(set_page(page - 1)); localStorage.setItem("page", page - 1) }} > <MdKeyboardArrowLeft/>  Previous</button>{<Pagination />}<button className={style.nextbtn} disabled={page === maxpage ? true : false} onClick={() => { dispatch(set_page(page + 1)); localStorage.setItem("page", page + 1) }} >Next <MdKeyboardArrowRight/></button>
 
                 </div>
             </>

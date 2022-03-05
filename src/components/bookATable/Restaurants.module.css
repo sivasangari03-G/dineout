@@ -6,6 +6,18 @@
     gap: 20px;
 }
 
+.upperlinks {
+    display: flex;
+    align-items: center;
+    color: silver;
+}
+
+.upperlinks span {
+    display: flex;
+    align-items: center;
+
+}
+
 .pageBtns {
     text-align: center;
     margin: 20px auto;
@@ -40,21 +52,44 @@
     border: none;
 }
 
+.topheading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* .topheading h2 {
+    padding: 0;
+    margin: 0;
+} */
+
+.topheading h2 span {
+    color: silver;
+    font-size: small;
+}
+
 .sort_dropdown_div {
     text-align: right;
-    margin-bottom: 10px;
+    color: grey;
+    /* margin-bottom: 10px; */
 }
 
 .sort_dropdown {
     font-size: large;
-  
+    padding: 8px;
+    border: none;
+    color: grey;
+    border-radius: 5px;
 }
+
 
 .filter_dropdown_div {
     display: none;
     margin-bottom: 10px;
     font-size: large;
 }
+
 
 .filter_dropdown {
     font-size: large;
