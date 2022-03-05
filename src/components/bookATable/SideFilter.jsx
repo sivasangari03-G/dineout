@@ -12,16 +12,21 @@ const SideFilter = () => {
 
   const dispatch = useDispatch()
   useEffect(() => {
+    console.log("my", dineoutpay)
     if (dineoutpay === "dineoutpay") {
       dispatch(set_quick_filter(dineoutpay))
       localStorage.setItem("quick_filter", dineoutpay)
     }
-    
+
+    else if (dineoutpay === "supersaver") {
+      dispatch(set_quick_filter("supersaver"))
+      localStorage.setItem("quick_filter", "supersaver")
+    }
     else {
       dispatch(set_quick_filter(""))
       localStorage.setItem("quick_filter", "")
     }
-  },[])
+  },[dineoutpay])
   let cuisine_filter = useSelector(store => store.RestaurantReducer.cuisine_filter)
   let type_filter = useSelector(store => store.RestaurantReducer.type_filter)
   let quick_filter = useSelector(store => store.RestaurantReducer.quick_filter)
