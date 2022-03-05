@@ -10,15 +10,17 @@ export const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { data } = useContext(LogInContext);
-  if (!data) navigate("/");
+  const login = JSON.parse(localStorage.getItem("value"));
+  if (!login) navigate("/");
   const handleremove = (id_) => {
     console.log(id_);
     dispatch(cartActions.removeItem(id_));
   };
+  console.log("in the cart");
   return (
     <React.Fragment>
       <DropDownNavbar />
-      {data && <CartContent cart={cart} handleremove={handleremove} />}
+      {login && <CartContent cart={cart} handleremove={handleremove} />}
     </React.Fragment>
   );
 };
