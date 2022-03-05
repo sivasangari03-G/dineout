@@ -39,57 +39,99 @@ const SideFilter = () => {
 
       <hr />
 
-      <input type="radio" name='quick' onChange={(e) => { dispatch(set_quick_filter(e.target.value)); localStorage.setItem("quick_filter", e.target.value) }} value="" checked={quick_filter === "" ? "checked" : ""} />
-      <label htmlFor="">None</label>
-      <br />
-      <input type="radio" name='quick' onChange={(e) => { dispatch(set_quick_filter(e.target.value)); localStorage.setItem("quick_filter", e.target.value) }} value="dineoutpay" checked={quick_filter === "dineoutpay" ? "checked" : ""} />
-      <label htmlFor="">Dineout Pay</label>
-      <br />
-      <input type="radio" name='quick' onChange={(e) => { dispatch(set_quick_filter(e.target.value)); localStorage.setItem("quick_filter", e.target.value) }} value="supersaver" checked={quick_filter === "supersaver" ? "checked" : ""} />
-      <label htmlFor="">Super Saver</label>
-      <br />
+      <div className={style.quick}>
+        <div>
+          <input type="radio" name='quick' onChange={(e) => { dispatch(set_quick_filter(e.target.value)); localStorage.setItem("quick_filter", e.target.value) }} value="" checked={quick_filter === "" ? "checked" : ""} />
+          <label htmlFor="">None</label>
 
+        </div>
+        <div>
 
+          <input type="radio" name='quick' onChange={(e) => { dispatch(set_quick_filter(e.target.value)); localStorage.setItem("quick_filter", e.target.value) }} value="dineoutpay" checked={quick_filter === "dineoutpay" ? "checked" : ""} />
+          <label htmlFor="">Dineout Pay</label>
+        </div>
+        <div>
+          <input type="radio" name='quick' onChange={(e) => { dispatch(set_quick_filter(e.target.value)); localStorage.setItem("quick_filter", e.target.value) }} value="supersaver" checked={quick_filter === "supersaver" ? "checked" : ""} />
+          <label htmlFor="">Super Saver</label>
+
+        </div>
+      </div>
 
       <h3>Cuisines</h3>
 
       <hr />
+      <div className={style.cuisine}>
 
-      <input type="radio" name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="" checked={cuisine_filter === "" ? "checked" : ""} />
-      <label htmlFor="">None</label>
-      <br />
-      <input type="radio" name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="North Indian" checked={cuisine_filter === "North Indian" ? "checked" : ""} />
-      <label htmlFor="">North Indian</label>
-      <br />
-      <input type="radio" name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="Thai" checked={cuisine_filter === "Thai" ? "checked" : ""} />
-      <label htmlFor="">Thai</label>
-      <br />
-      <input type="radio" name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="Japanese" checked={cuisine_filter === "Japanese" ? "checked" : ""} />
-      <label htmlFor="">Japanese</label>
-      <br />
-      <input type="radio" name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="Asian" checked={cuisine_filter === "Asian" ? "checked" : ""} />
-      <label htmlFor="">Asian</label>
+        <div>
+          <input type="radio" id='none' name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="" checked={cuisine_filter === "" ? "checked" : ""} />
+          <label htmlFor="none" className={cuisine_filter === "" ? `${style.active}` : ""}>None</label>
+
+        </div>
+
+        <div>
+          <input type="radio" id='north' name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="North Indian" checked={cuisine_filter === "North Indian" ? "checked" : ""} />
+          <label htmlFor="north" className={cuisine_filter === "North Indian" ? `${style.active}` : ""}>North Indian</label>
+
+        </div>
+
+        <div>
+          <input type="radio" id='thai' name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="Thai" checked={cuisine_filter === "Thai" ? "checked" : ""} />
+          <label htmlFor="thai" className={cuisine_filter === "Thai" ? `${style.active}` : ""} >Thai</label>
+
+        </div>
+
+        <div>
+
+          <input type="radio" id='japanese' name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="Japanese" checked={cuisine_filter === "Japanese" ? "checked" : ""} />
+          <label htmlFor="japanese" className={cuisine_filter === "Japanese" ? `${style.active}` : ""}>Japanese</label>
+        </div>
+
+        <div>
+          <input type="radio" id='asian' name='cuisine_filter' onChange={(e) => { dispatch(set_cuisine_filter(e.target.value)); localStorage.setItem("cuisine_filter", e.target.value) }} value="Asian" checked={cuisine_filter === "Asian" ? "checked" : ""} />
+          <label htmlFor="asian" className={cuisine_filter === "Asian" ? `${style.active}` : ""}>Asian</label>
+
+        </div>
+      </div>
+
       <br />
 
       <h3>Tags</h3>
 
       <hr />
 
-      <input type="radio" name='type_filter' value="" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "" ? "checked" : ""} />
-      <label htmlFor="">None</label>
-      <br />
-      <input type="radio" name='type_filter' value="Nightlife" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Nightlife" ? "checked" : ""} />
-      <label htmlFor="">Night Life</label>
-      <br />
-      <input type="radio" name='type_filter' value="Bar" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Bar" ? "checked" : ""} />
-      <label htmlFor="">Bar</label>
-      <br />
-      <input type="radio" name='type_filter' value="Lounge" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Lounge" ? "checked" : ""} />
-      <label htmlFor="">Lounge</label>
-      <br />
-      <input type="radio" name='type_filter' value="Casual Dining" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Casual Dining" ? "checked" : ""} />
-      <label htmlFor="">Casual Dining</label>
-      <br />
+      <div className={style.type}>
+
+        <div>
+
+          <input type="radio" name='type_filter' value="" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "" ? "checked" : ""} />
+          <label htmlFor="">None</label>
+        </div>
+        <div>
+
+          <input type="radio" name='type_filter' value="Nightlife" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Nightlife" ? "checked" : ""} />
+          <label htmlFor="">Night Life</label>
+        </div>
+
+        <div>
+
+          <input type="radio" name='type_filter' value="Bar" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Bar" ? "checked" : ""} />
+          <label htmlFor="">Bar</label>
+        </div>
+
+        <div>
+          <input type="radio" name='type_filter' value="Lounge" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Lounge" ? "checked" : ""} />
+          <label htmlFor="">Lounge</label>
+
+        </div>
+
+        <div>
+          <input type="radio" name='type_filter' value="Casual Dining" onChange={(e) => { dispatch(set_type_filter(e.target.value)); localStorage.setItem("type_filter", e.target.value) }} checked={type_filter === "Casual Dining" ? "checked" : ""} />
+          <label htmlFor="">Casual Dining</label>
+
+        </div>
+
+      </div>
+
     </div>
   )
 }
