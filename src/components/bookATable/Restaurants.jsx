@@ -61,7 +61,6 @@ const Restaurants = ({ city }) => {
     async function get1() {
         let res = await fetch(`https://fake-json-server2.herokuapp.com/products?city=${city}&cuisine_like=${cuisine_filter}&type_like=${type_filter}&quick_like=${quick_filter}`)
         let res1 = await res.json()
-        console.log(quick_filter, "quickfilter")
         dispatch(set_max_page(Math.ceil(res1.length / 9)))
         localStorage.setItem("maxpage", maxpage)
         dispatch(set_page(1))
