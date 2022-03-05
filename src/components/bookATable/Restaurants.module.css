@@ -21,6 +21,9 @@
 .pageBtns {
     text-align: center;
     margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -44,12 +47,16 @@
     margin-right: 10px;
     font-size: larger;
     border: none;
+    display: flex;
+    align-items: center;
 }
 .nextbtn {
     background-color: transparent;
     font-size: larger;
     margin-left: 10px;
     border: none;
+    display: flex;
+    align-items: center;
 }
 
 .topheading {
@@ -59,10 +66,7 @@
     margin-bottom: 20px;
 }
 
-/* .topheading h2 {
-    padding: 0;
-    margin: 0;
-} */
+
 
 .topheading h2 span {
     color: silver;

@@ -4,18 +4,21 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import styles from "./dropDownNavbar.module.css";
 import { LogInNavbar } from "./LogInNavbar";
-
+import {useDispatch, useSelector} from "react-redux"
 import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
+import { set_city } from "../../Redux/Restaurants/actions";
 
 export const DropDownNavbar = () => {
 	const places = useContext(NavbarContext);
-		const [navbarCity, setNavbarCity] = useState(null);
+		const navbarCity = useSelector(store => store.RestaurantReducer.city)
 
 		console.log(navbarCity);
-		useEffect(() => {
-			localStorage.setItem("navbarCity", navbarCity);
-		}, [navbarCity]);
+		// useEffect(() => {
+		// 	localStorage.setItem("navbarCity", navbarCity);
+		// }, [navbarCity]);
+
+		const dispatch = useDispatch()
 
 	return (
 		<div className={styles.dropDownTop}>
@@ -31,7 +34,7 @@ export const DropDownNavbar = () => {
 					<Autocomplete
 						disablePortal
 						id="combo-box-demo"
-						onChange={(event, value) => setNavbarCity(value)}
+						onChange={(event, value) => dispatch(set_city(value))}
 						options={places}
 						sx={{
 							width: 220,

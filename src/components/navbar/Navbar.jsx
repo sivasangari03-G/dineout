@@ -5,15 +5,19 @@ import { NavbarContext } from "../../contexts/NavbarContext";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { LogInNavbar } from "./LogInNavbar";
+import { useDispatch, useSelector } from "react-redux";
+import { set_city } from "../../Redux/Restaurants/actions";
 
 export const Navbar = () => {
 	const places = useContext(NavbarContext);
-	const [navbarCity, setNavbarCity] = useState(null);
-
+	// const [navbarCity, setNavbarCity] = useState(null);
+	const navbarCity = useSelector(store => store.RestaurantReducer.city)
 	console.log(navbarCity);
-	useEffect(() => {
-		localStorage.setItem("navbarCity", navbarCity);
-	}, [navbarCity]);
+	// useEffect(() => {
+	// 	localStorage.setItem("navbarCity", navbarCity);
+	// }, [navbarCity]);
+
+	const dispatch = useDispatch()
 	return (
 		<React.Fragment>
 			<div className={styles.navbarMain}>
@@ -26,7 +30,7 @@ export const Navbar = () => {
 				<div>
 					<Autocomplete
 						disablePortal
-						onChange={(event, value) => setNavbarCity(value)}
+						onChange={(event, value) => dispatch(set_city(value))}
 						id="combo-box-demo"
 						options={places}
 						sx={{
