@@ -14,6 +14,10 @@
 
 .inner {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
 .image_rating {
@@ -58,6 +62,7 @@
     align-items: center;
     place-items: center;
     font-size: small;
+
 }
 
 .dineout_pay img {

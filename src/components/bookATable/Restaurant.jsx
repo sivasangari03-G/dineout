@@ -10,6 +10,7 @@ const Restaurant = ({ x }) => {
                     {x.rating}
                 </div>
             </div>
+            
             <div className={style.inner}>
                 <span className={style.title}>{x.name.substring(0, 28)}</span>
                 <div className={style.inner_details}>
