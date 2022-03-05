@@ -15,9 +15,9 @@ export const NavbarRouterComponent = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/bookatable" element={<BookATable />}></Route>
         <Route path="/dineoutpassport" element={<DineOutPassport />}></Route>
-        <Route path="/dineoutpay" element={<DineoutPay />}></Route>
+        <Route path=":dineoutpay" element={<DineoutPay />}></Route>
         <Route path="/details:name" element={<Details />}></Route>
-        <Route path="/supersaver" element={<SuperSaver />}></Route>
+        <Route path=":supersaver" element={<SuperSaver />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </div>
