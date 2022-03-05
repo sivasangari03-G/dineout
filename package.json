@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "date-fns": "^2.8.1",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.4.4",
@@ -25,7 +26,8 @@
     "react-slick": "^0.28.1",
     "redux": "^4.1.2",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "react-waypoint": "^9.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
