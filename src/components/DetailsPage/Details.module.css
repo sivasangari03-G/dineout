@@ -21,6 +21,7 @@
 .mainBody > img {
   border-radius: 3px;
   width: 94%;
+  height: 445px;
 }
 .mainBody > img {
   background: rgb(247, 246, 246);
@@ -132,4 +133,22 @@
 }
 .contactContainerName {
   font-weight: bold;
+}
+.viewmore {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  background-image: linear-gradient(to right, white, rgb(212, 241, 248));
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+  width: 100%;
+  color: #636363;
+}
+.viewmore > img {
+  margin-left: 10px;
+  height: 60%;
+}
+.viewmorearr {
+  text-align: right;
+  font-weight: 700;
 }

@@ -1,4 +1,12 @@
 .navbarMain {
+
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  gap: 20px;
+  align-items: center;
+
 	display: flex;
 	/* border: 1px solid black; */
 	width: 95%;
@@ -7,22 +15,23 @@
 	padding: 15px;
 	gap: 20px;
 	align-items: center;
+
 }
 
 .navbarMain > div > img {
-	height: 30px;
-	width: 100px;
+  height: 30px;
+  width: 100px;
 }
 
 .anchorNavbar {
-	text-decoration: none;
-	font-size: 15px;
-	color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  color: #333;
 }
 
 .anchorNavbar:hover {
-	color: #ff645a;
+  color: #ff645a;
 }
 .anchorNavbar:focus {
-	color: #ff645a;
+  color: #ff645a;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { RestaurantNeatYouContext } from "../../contexts/RestaurantNeatYouContext";
 import { BestOffers } from "./BestOffers";
 import { HomePageImg } from "./HomePageImg";
@@ -7,12 +7,18 @@ import { Navbar } from "../navbar/Navbar";
 import { AvailableIn } from "./AvailableIn";
 import { EightFacility } from "./EightFacility";
 import { FeaturedRes } from "./FeaturedRes";
+
+import { DropDownNavbar } from "../navbar/DropDownNavbar";
+
 import { FinestRes } from "./FinestRes";
+
 export const Home = () => {
   const resData = useContext(RestaurantNeatYouContext);
+
   return (
     <div>
       <Navbar />
+      {/* <DropDownNavbar /> */}
       <HomePageImg />
       <BestOffers />
       {resData && <RestaurantNearYou />}

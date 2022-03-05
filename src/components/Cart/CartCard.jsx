@@ -4,18 +4,24 @@ export const CartCard = (props) => {
   console.log(props.elem);
   //console.log("heloo");
   const arrow = ">";
+  const handleremove = () => {
+    props.handleremove(props.elem.id);
+  };
   return (
     <React.Fragment>
       <div className={styles.container}>
         <div>
-          <img src={props.elem.image} />
+          <img src={props.elem.data.image} />
         </div>
         <div>
-          <div className={styles.name}>{props.elem.name}</div>
+          <div className={styles.name}>{props.elem.data.name}</div>
           <div className={styles.address}>
-            {props.elem.area}, {props.elem.city}
+            {props.elem.data.area}, {props.elem.data.city}
           </div>
-          <div className={styles.time}>time to be taken dynamically</div>
+          <div className={styles.time}>
+            <span>Today</span>
+            <span>{props.elem.time}</span>
+          </div>
           <div className={styles.table}>
             <div className={styles.row}>
               <div>Dinner</div>
@@ -30,7 +36,9 @@ export const CartCard = (props) => {
           </div>
         </div>
         <div className={styles.cancelcontainer}>
-          <div className={styles.cancel}>Cancel</div>
+          <div className={styles.cancel} onClick={handleremove}>
+            Cancel
+          </div>
           <div className={styles.arr}>{arrow}</div>
         </div>
       </div>

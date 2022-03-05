@@ -17,9 +17,14 @@ export const Details = () => {
   console.log(location.state, data);
   const arrow = ">";
   const addToCartHandler = (parameter) => {
-    console.log(parameter);
-    dispatch(cartActions.addItemToCart(data));
+    const id_date = new Date();
+    // console.log(id_date.getTime());
+    const newData_ = { data, ...parameter, id: id_date };
+    dispatch(cartActions.addItemToCart(newData_));
     navigate("/");
+  };
+  const navToBookATable = () => {
+    navigate("/bookatable");
   };
   return (
     <React.Fragment>
@@ -103,6 +108,11 @@ export const Details = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className={styles.viewmore} onClick={navToBookATable}>
+            <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/1/chainoutlets.png" />
+            <div>View more outlets of this chain in {data.city}</div>
+            <div className={styles.viewmorearr}>{arrow}</div>
           </div>
           <div className={styles.contactContainer}>
             <div className={styles.contactContainerName}>
