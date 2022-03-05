@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { get_data, set_city, set_cuisine_filter, set_loading, set_max_page, set_page, set_sort, set_total, set_type_filter } from '../../Redux/Restaurants/actions'
+import { get_data, set_cuisine_filter, set_loading, set_max_page, set_page, set_sort, set_total, set_type_filter } from '../../Redux/Restaurants/actions'
 import style from "./Restaurants.module.css"
 import Restaurant from "./Restaurant"
 import Skeleton from 'react-loading-skeleton'
@@ -12,10 +12,6 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 const Restaurants = ({ city }) => {
     const dispatch = useDispatch()
     city = city.charAt(0).toUpperCase() + city.slice(1);
-
-    useEffect(() => {
-        dispatch(set_city(city))
-    })
 
     let pagearr = []
 
@@ -43,7 +39,7 @@ const Restaurants = ({ city }) => {
         get1()
         dispatch(set_loading(false))
 
-    }, [sort, cuisine_filter, type_filter, quick_filter])
+    }, [sort, cuisine_filter, type_filter, quick_filter, city])
 
 
 

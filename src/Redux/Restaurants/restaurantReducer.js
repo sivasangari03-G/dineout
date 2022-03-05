@@ -3,7 +3,7 @@ import { GET_DATA, SET_CITY, SET_CUISINE_FILTER, SET_LOADING, SET_MAX_PAGE, SET_
 const initialState = {
   restaurants: [],
   loading: false,
-  city: localStorage.getItem("city") || "Delhi",
+  city: localStorage.getItem("navbarCity") || "Delhi",
   page: localStorage.getItem("page") || 1,
   maxpage: localStorage.getItem("maxpage") || 1,
   sort: localStorage.getItem("sort") || "",
@@ -74,6 +74,7 @@ const RestaurantReducer = (state = initialState, { type, payload }) => {
     }
 
     case SET_CITY: {
+      localStorage.setItem("navbarCity", payload)
       return {
         ...state,
         city: payload

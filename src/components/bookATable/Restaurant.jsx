@@ -21,6 +21,7 @@ const Restaurant = ({ x }) => {
             {x.address},{x.area}
           </span>
           <br />
+          <br />
           <span>
             {x.averageCost} (approx) |{" "}
             {x.cuisine

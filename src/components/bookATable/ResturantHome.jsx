@@ -2,12 +2,12 @@ import React from 'react'
 import Restaurants from './Restaurants'
 import style from "./RestaurantHome.module.css"
 import SideFilter from './SideFilter'
-import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 
 const ResturantHome = () => {
-  // let {city} = useParams()
-
-  let city ="Delhi"
+  
+  let city = useSelector(store => store.RestaurantReducer.city)
   return (
     <div className={style.restauranthome}>
         <SideFilter/>
