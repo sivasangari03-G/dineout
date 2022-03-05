@@ -12,7 +12,7 @@ const SideFilter = () => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    console.log("my", dineoutpay)
+    
     if (dineoutpay === "dineoutpay") {
       dispatch(set_quick_filter(dineoutpay))
       localStorage.setItem("quick_filter", dineoutpay)
