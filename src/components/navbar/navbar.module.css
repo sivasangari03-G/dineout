@@ -1,10 +1,21 @@
 .navbarMain {
+
   display: flex;
   width: 90%;
   margin: auto;
   padding: 15px;
   gap: 20px;
   align-items: center;
+
+	display: flex;
+	/* border: 1px solid black; */
+	width: 95%;
+	justify-content: center;
+	margin: auto;
+	padding: 15px;
+	gap: 20px;
+	align-items: center;
+
 }
 
 .navbarMain > div > img {

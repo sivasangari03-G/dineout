@@ -6,7 +6,7 @@ export const RestaurantNeatYouContextProvider = ({ children }) => {
 	var [resData, setResData] = useState();
 
 	useEffect(() => {
-		fetch("http://localhost:8000/posts", {
+		fetch(`http://localhost:8000/posts`, {
 			method: "GET",
 			headers: { "Content-type": "application/json;charset=UTF-8" },
 		})

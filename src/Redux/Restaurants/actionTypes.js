@@ -3,6 +3,7 @@ export const SET_LOADING = "SET_LOADING";
 export const SET_SORT = "SET_SORT";
 export const SET_CUISINE_FILTER = "SET_CUISINE_FILTER";
 export const SET_TYPE_FILTER = "SET_TYPE_FILTER";
+export const SET_QUICK_FILTER = "SET_QUICK_FILTER";
 export const SET_PAGE = "SET_PAGE";
 export const SET_MAX_PAGE = "SET_MAX_PAGE";
 export const SET_CITY = "SET_CITY";

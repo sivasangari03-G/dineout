@@ -1,14 +1,13 @@
 import React from "react";
 import { DropDownNavbar } from "../navbar/DropDownNavbar";
-import {DineOutPassportComponents} from "./DineOutPassportComponents"
+import { DineOutPassportComponents } from "./DineOutPassportComponents";
 export const DineOutPassport = () => {
 	return (
 		<div>
-			<div>
-				<DropDownNavbar />
+			<DropDownNavbar />
+			<div style={{ position: 'relative',top:"100"}}>
+				<DineOutPassportComponents />
 			</div>
-
-			<DineOutPassportComponents />
 		</div>
 	);
 };

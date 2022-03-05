@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavbarContext } from "../../contexts/NavbarContext";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
@@ -10,6 +10,12 @@ import { NavLink } from "react-router-dom";
 
 export const DropDownNavbar = () => {
 	const places = useContext(NavbarContext);
+		const [navbarCity, setNavbarCity] = useState(null);
+
+		console.log(navbarCity);
+		useEffect(() => {
+			localStorage.setItem("navbarCity", navbarCity);
+		}, [navbarCity]);
 
 	return (
 		<div className={styles.dropDownTop}>
@@ -25,6 +31,7 @@ export const DropDownNavbar = () => {
 					<Autocomplete
 						disablePortal
 						id="combo-box-demo"
+						onChange={(event, value) => setNavbarCity(value)}
 						options={places}
 						sx={{
 							width: 220,
@@ -78,25 +85,20 @@ export const DropDownNavbar = () => {
 					</NavLink>
 				</div>
 				<div>
-					<NavLink className={styles.anchorNavbar} to="/dineoutpassport">
+					<NavLink
+						className={styles.anchorNavbar}
+						to="/dineoutpassport"
+					>
 						Dineout Passport
 					</NavLink>
 				</div>
-				<div>
-					<NavLink className={styles.anchorNavbar} to="/events">
-						Events
-					</NavLink>
-				</div>
+
 				<div>
 					<NavLink className={styles.anchorNavbar} to="/supersaver">
 						Super Saver
 					</NavLink>
 				</div>
-				<div>
-					<NavLink className={styles.anchorNavbar} to="/blog">
-						Blog
-					</NavLink>
-				</div>
+
 			</div>
 			<div className={styles.shadowLine2}></div>
 		</div>

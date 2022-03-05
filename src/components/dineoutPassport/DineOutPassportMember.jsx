@@ -20,19 +20,47 @@ export const DineOutPassportMember = () => {
 			<div>
 				<Slider {...settings}>
 					<div>
-						<div className={styles.bgImg1Mem1}></div>
+						<div className={styles.bgImg1Mem1}>
+							<div className={styles.cashback}>100% cashback</div>
+							<div className={styles.promocode}>
+								As PromoCash on purchase of every Dineout
+								Passport membership
+							</div>
+						</div>
 					</div>
 					<div>
-						<div className={styles.bgImg1Mem2}></div>
+						<div className={styles.bgImg1Mem5}>
+							<div className={styles.cashback}>
+								Up to 40% Off on Total Bill
+							</div>
+							<div className={styles.promocode}>
+								At 2000+ restaurants
+							</div>
+						</div>
 					</div>
 					<div>
-						<div className={styles.bgImg1Mem3}></div>
+						<div className={styles.bgImg1Mem2}>
+							<div className={styles.cashback}>1+1 on Buffet</div>
+							<div className={styles.promocode}>
+								At 200+ Premium Restaurants
+							</div>
+						</div>
 					</div>
 					<div>
-						<div className={styles.bgImg1Mem4}></div>
+						<div className={styles.bgImg1Mem3}>
+							<div className={styles.cashback}>
+								Finest Restaurants and Hotels
+							</div>
+							<div className={styles.promocode}>
+								Curated list of top restaurants across the
+								country
+							</div>
+						</div>
 					</div>
 					<div>
-						<div className={styles.bgImg1Mem5}></div>
+						<div className={styles.bgImg1Mem4}>
+							<div className={styles.cashback}>Dineout Passport Experiences</div>
+						</div>
 					</div>
 				</Slider>
 			</div>

@@ -32,23 +32,33 @@ export const DineOutPassportExperience = () => {
 				<div>
 					<Slider {...settings}>
 						<div>
-							<div className={styles.bgImg1Mem1}></div>
+							<div className={styles.bgImg1Mem1}>
+								<div className={styles.brightnessText}>
+									Masterclass
+								</div>
+							</div>
 						</div>
 						<div>
-							<div className={styles.bgImg1Mem2}></div>
+							<div className={styles.bgImg1Mem2}>
+								<div className={styles.brightnessText}>
+									Menu Previous
+								</div>
+							</div>
 						</div>
 						<div>
-							<div className={styles.bgImg1Mem3}></div>
+							<div className={styles.bgImg1Mem3}>
+								<div className={styles.brightnessText}>
+									Mixology
+								</div>
+							</div>
 						</div>
 						<div>
-							<div className={styles.bgImg1Mem4}></div>
+							<div className={styles.bgImg1Mem4}>
+								<div className={styles.brightnessText}>
+									Let's Talk
+								</div>
+							</div>
 						</div>
-						<div>
-							<div className={styles.bgImg1Mem5}></div>
-						</div>
-						{/* <div>
-							<div className={styles.bgImg1Mem6}></div>
-						</div> */}
 					</Slider>
 				</div>
 			</div>

@@ -7,7 +7,10 @@ import { Navbar } from "../navbar/Navbar";
 import { AvailableIn } from "./AvailableIn";
 import { EightFacility } from "./EightFacility";
 import { FeaturedRes } from "./FeaturedRes";
+
 import { DropDownNavbar } from "../navbar/DropDownNavbar";
+
+import { FinestRes } from "./FinestRes";
 
 export const Home = () => {
   const resData = useContext(RestaurantNeatYouContext);
@@ -21,6 +24,7 @@ export const Home = () => {
       {resData && <RestaurantNearYou />}
       <FeaturedRes />
       <EightFacility />
+      <FinestRes />
       <AvailableIn />
     </div>
   );
