@@ -24,7 +24,6 @@ export const FeaturedRes = () => {
   };
   const featuredData = useContext(FeaturedResContext);
 
-
   const data = featuredData.filter((elem) => {
     return elem.featured === true;
   });
@@ -36,7 +35,7 @@ export const FeaturedRes = () => {
         <Slider {...settings}>
           {data.map((elem) => {
             return (
-              <div>
+              <div key={elem.id}>
                 <Link to="/" className={styles.featuredLink}>
                   <div key={elem.id} className={styles.restaurantCartsMain}>
                     <div>
@@ -56,6 +55,35 @@ export const FeaturedRes = () => {
                         </div>
                         <div className={styles.rating}>{elem.rating}</div>
                       </div>
+
+                      <div
+                        style={{
+                          borderBottom: "1px solid rgba(0, 0, 0, 0.05)",
+                          marginLeft: "20px",
+                          marginRight: "20px",
+                        }}
+                      ></div>
+                      <div
+                        style={{
+                          color: "#54BD8A",
+                          fontWeight: "600",
+                          display: "flex",
+                          alignItems: "center",
+                          paddingLeft: "20px",
+                          marginTop: "10px",
+                          paddingBottom: "20px",
+                        }}
+                      >
+                        <LocalOfferIcon fontSize="small" />
+                        <div
+                          style={{
+                            paddingLeft: "10px",
+                            fontSize: "14px",
+                          }}
+                        >
+                          Flat 10% Off the Total Bill
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -66,95 +94,4 @@ export const FeaturedRes = () => {
       </div>
     </div>
   );
-
-	const data = featuredData.filter((elem) => {
-		return elem.featured === true;
-	});
-	console.log(data);
-	return (
-		<div className={styles.featuredResMain}>
-			<h2 className={styles.featuredResTitle}>Featured Restaurants</h2>
-			<div style={{ margin: "30px auto", width: "100%" }}>
-				<Slider {...settings}>
-					{data.map((elem) => {
-						return (
-							<div key={elem.id}>
-								<Link to="/" className={styles.featuredLink}>
-									<div
-										key={elem.id}
-										className={styles.restaurantCartsMain}
-									>
-										<div>
-											<div className={styles.imgMain}>
-												<img
-													className={styles.resImg}
-													src={elem.image}
-													alt="hotel images"
-												/>
-											</div>
-											<div className={styles.resAllMain}>
-												<div
-													className={
-														styles.nameAddressArea
-													}
-												>
-													<div
-														className={styles.name}
-													>
-														{elem.name}
-													</div>
-													<div
-														className={
-															styles.addressArea
-														}
-													>
-														{elem.address},{" "}
-														{elem.area}
-													</div>
-												</div>
-												<div className={styles.rating}>
-													{elem.rating}
-												</div>
-											</div>
-
-											<div
-												style={{
-													borderBottom:
-														"1px solid rgba(0, 0, 0, 0.05)",
-													marginLeft: "20px",
-													marginRight: "20px",
-												}}
-											></div>
-											<div
-												style={{
-													color: "#54BD8A",
-													fontWeight: "600",
-													display: "flex",
-													alignItems: "center",
-													paddingLeft: "20px",
-													marginTop: "10px",
-													paddingBottom: "20px"
-												}}
-											>
-												<LocalOfferIcon fontSize="small" />
-												<div
-													style={{
-														paddingLeft: "10px",
-														fontSize: "14px"
-													}}
-												>
-													Flat 10% Off the Total Bill
-												</div>
-											</div>
-										</div>
-									</div>
-								</Link>
-							</div>
-						);
-					})}
-				</Slider>
-			</div>
-		</div>
-	);
-
 };
