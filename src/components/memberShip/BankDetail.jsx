@@ -55,6 +55,15 @@ export const BankDetail = () => {
 
 		}
 	};
+	const handlePaymentUpi = () => {
+		if (upiFinal) {
+			alert("Payment sucessfull!");
+			navigate("/");
+		} else {
+			alert("Payment Failed!");
+
+		}
+	}
 	var rupee = data.rupees;
 	var rupees = parseInt(rupee);
 
@@ -234,14 +243,14 @@ export const BankDetail = () => {
 									style={{
 										backgroundColor: "#ff7b73",
 									}}
-									onClick={handlePaymentDebit}
+									onClick={handlePaymentUpi}
 									className={styles.btnPay}
 								>
 									Pay {subAns}
 								</button>
 							) : (
 								<button
-									onClick={handlePaymentDebit}
+									onClick={handlePaymentUpi}
 									className={styles.btnPay}
 								>
 									Pay {subAns}
