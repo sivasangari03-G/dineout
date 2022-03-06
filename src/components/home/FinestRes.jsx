@@ -23,20 +23,22 @@ export const FinestRes = () => {
 
   const array = resData.splice(0, 4);
   return (
-    <div className={styles.finestRoot}>
-      <div>
-        <img
-          className={styles.registerImg}
-          src="https://im1.dineout.co.in/images/uploads/misc/2020/Sep/9/artboard.png?tr=tr:n-large"
-          alt="img1"
-        />
-      </div>
-      <div className={styles.finestImageAlignMain}>
-        {array.map((elem) => {
-          return (
-            <div key={elem.id}>
-              <CardDisplay elem={elem} />
-              {/* <Link className={styles.finestLinkDec} to="/">
+		<div className={styles.finestRoot}>
+			<Link to="/dineoutpassport">
+				<div>
+					<img
+						className={styles.registerImg}
+						src="https://im1.dineout.co.in/images/uploads/misc/2020/Sep/9/artboard.png?tr=tr:n-large"
+						alt="img1"
+					/>
+				</div>
+			</Link>
+			<div className={styles.finestImageAlignMain}>
+				{array.map((elem) => {
+					return (
+						<div key={elem.id}>
+							<CardDisplay elem={elem} />
+							{/* <Link className={styles.finestLinkDec} to="/">
 									<div className={styles.forHover}>
 										<div className={styles.imgMain}>
 											<img
@@ -68,10 +70,10 @@ export const FinestRes = () => {
 										</div>
 									</div>
 								</Link> */}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+						</div>
+					);
+				})}
+			</div>
+		</div>
   );
 };
