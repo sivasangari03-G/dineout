@@ -3,10 +3,13 @@ export const fetchCartData = () => {
   console.log("hello");
   return async (dispatch) => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:8000/cart`, {
-        method: "GET",
-        headers: { "content-type": "application/json;charset=UTF-8" },
-      });
+      const response = await fetch(
+			`https://fake-json-server2.herokuapp.com/cart`,
+			{
+				method: "GET",
+				headers: { "content-type": "application/json;charset=UTF-8" },
+			}
+		);
       const data = await response.json();
       return data;
     };

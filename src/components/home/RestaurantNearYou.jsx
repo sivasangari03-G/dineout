@@ -11,13 +11,13 @@ export const RestaurantNearYou = () => {
   const [resData, setResData] = useState([]);
   console.log(city, "from home page");
   useEffect(() => {
-    fetch(`https://fake-json-server2.herokuapp.com/products?city=${city}`)
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        setResData([...json]);
-      })
-      .catch((err) => console.log(err));
+    fetch(`https://fake-json-server2.herokuapp.com/posts?city=${city}`)
+		.then((response) => response.json())
+		.then((json) => {
+			console.log(json);
+			setResData([...json]);
+		})
+		.catch((err) => console.log(err));
   }, [city]);
 
   const array = resData.splice(0, 4);

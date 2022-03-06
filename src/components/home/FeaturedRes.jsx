@@ -30,14 +30,14 @@ export const FeaturedRes = ({flat}) => {
   console.log(city, "from home page");
   useEffect(() => {
     fetch(
-      `https://fake-json-server2.herokuapp.com/products?city=${city}&featured=true`
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        setResData([...json]);
-      })
-      .catch((err) => console.log(err));
+		`https://fake-json-server2.herokuapp.com/posts?city=${city}&featured=true`
+	)
+		.then((response) => response.json())
+		.then((json) => {
+			console.log(json);
+			setResData([...json]);
+		})
+		.catch((err) => console.log(err));
   }, [city]);
 
  

@@ -5,7 +5,7 @@ export const MemberShipContext = createContext();
 export const MemberShipContextProvider = ({ children }) => {
     const [member,setMember] = useState([])
     useEffect(() => {
-		fetch("http://localhost:8000/membership", {
+		fetch("https://fake-json-server2.herokuapp.com/membership", {
 			method: "GET",
 			headers: { "Content-type": "application/json;charset=UTF-8" },
 		})
