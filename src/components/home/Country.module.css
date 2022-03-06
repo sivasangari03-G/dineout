@@ -15,13 +15,14 @@
   border: none;
 }
 .gridd {
-  display: grid;
-  grid-template-columns: 20% 80% 10%;
+  display: flex;
+  justify-content: space-around;
 }
 .gridd > div {
   height: 40px;
   align-items: center;
   text-align: left;
+  margin-left: 20px;
 }
 
 .widthh {
@@ -31,8 +32,8 @@
 }
 /* @media only screen and (max-width: 1300px) {
   .widthh {
-    width: 500px;
-    background: white;
+    width: 800px;
+
     border-radius: 3px;
   }
 }

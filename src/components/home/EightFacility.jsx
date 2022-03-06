@@ -18,7 +18,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
@@ -31,7 +31,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
@@ -44,7 +44,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
@@ -57,7 +57,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
@@ -70,7 +70,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
@@ -83,7 +83,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
@@ -96,7 +96,7 @@ export const EightFacility = () => {
       </div>
 
       <div>
-        <Link to="/" className={styles.eightLink}>
+        <Link to="/bookatable" className={styles.eightLink}>
           <div className={styles.eightFacilityFlex}>
             <img
               className={styles.eightLogo}
