@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
+import React, { useContext } from "react";
+
 import { NavbarContext } from "../../contexts/NavbarContext";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
@@ -13,7 +12,7 @@ export const Navbar = () => {
   const places = useContext(NavbarContext);
   // const [navbarCity, setNavbarCity] = useState(null);
   const navbarCity = useSelector((store) => store.RestaurantReducer.city);
-  console.log(navbarCity);
+
   // useEffect(() => {
   // 	localStorage.setItem("navbarCity", navbarCity);
   // }, [navbarCity]);

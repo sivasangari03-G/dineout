@@ -11,7 +11,7 @@ export const LogOut = () => {
 	const navigateToCart = useNavigate();
 
 	useEffect(() => {
-		console.log();
+
 	}, [handleLogOutBtn, data]);
 
 	const handleDropIssue = () => {

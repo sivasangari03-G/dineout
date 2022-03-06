@@ -15,7 +15,7 @@ export const PaymentComponent = () => {
 	};
 	const navigate = useNavigate();
 	let data = JSON.parse(localStorage.getItem("membership"));
-	console.log(data);
+
 	const handleBack = () => {
 		navigate("/membershipplans");
 	};
@@ -36,7 +36,7 @@ export const PaymentComponent = () => {
 		}
 		setPromo("")
 	};
-	// console.log(data.rupees);
+
 	var rupee = data.rupees
 	var rupees = parseInt(rupee);
 

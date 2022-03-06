@@ -9,11 +9,9 @@ export const MemberShipPage = () => {
 	// const navigate = useNavigate();
 	let [selectPlan, setSelectPlan] = useState([]);
 	let [isClicked, setIsClicked] = useState(false);
-	console.log(isClicked);
-  console.log(selectPlan);
+
 	useEffect(() => {
 		localStorage.setItem("membership", JSON.stringify(selectPlan));
-		console.log(selectPlan);
 	}, [selectPlan]);
 	const handleOne = (e) => {
 		setSelectPlan(member[0]);

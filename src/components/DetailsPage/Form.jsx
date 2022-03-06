@@ -32,9 +32,9 @@ export const Form = (props) => {
     setMobile(e.currentTarget.value);
   };
   const onSelectedDay = (d) => {
-    //console.log(d.getDate());
+
     setCount((prev) => prev + 1);
-    if (count == 1) {
+    if (count === 1) {
       setDate({
         day: d.getDate(),
         month: d.getMonth(),

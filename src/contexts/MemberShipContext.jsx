@@ -11,10 +11,9 @@ export const MemberShipContextProvider = ({ children }) => {
 		})
 			.then((response) => response.json())
 			.then((json) => {
-				// console.log("member", json);
 				setMember(json);
 			})
-			.catch((err) => console.log(err));
+			
 	}, []);
 
   return (

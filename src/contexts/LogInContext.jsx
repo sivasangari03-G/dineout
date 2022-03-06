@@ -18,7 +18,6 @@ export const LogInContextProvider = ({ children }) => {
 	};
 	const handleModelContinue = () => {
 		if (logInWithNum.length === 10) {
-			console.log("true");
 			setOpen(false);
 			setData(true);
 			localStorage.setItem("value", true);

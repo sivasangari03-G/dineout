@@ -27,7 +27,7 @@ export default React.memo(function ReactHorizontalDatePicker({
   const heading_dateFormat = "MMM yyyy";
 
   useEffect(() => {
-    console.log(headingDate);
+
   }, [headingDate]);
 
   const applyStyles = (day) => {
@@ -46,10 +46,10 @@ export default React.memo(function ReactHorizontalDatePicker({
     let currentPosition = pos.currentPosition;
     let previousPosition = pos.previousPosition;
 
-    if (previousPosition == "inside" && currentPosition == "above") {
+    if (previousPosition === "inside" && currentPosition === "above") {
       setHeadingDate(date);
     }
-    if (previousPosition == "above" && currentPosition == "inside") {
+    if (previousPosition === "above" && currentPosition === "inside") {
       setHeadingDate(addDays(date, -1));
     }
   };

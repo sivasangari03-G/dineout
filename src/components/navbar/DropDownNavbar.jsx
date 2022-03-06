@@ -13,7 +13,7 @@ export const DropDownNavbar = () => {
   const places = useContext(NavbarContext);
   const navbarCity = useSelector((store) => store.RestaurantReducer.city);
 
-  console.log(navbarCity);
+
   // useEffect(() => {
   // 	localStorage.setItem("navbarCity", navbarCity);
   // }, [navbarCity]);

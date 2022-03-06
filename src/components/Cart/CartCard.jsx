@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./CartCard.module.css";
 export const CartCard = (props) => {
-  console.log(props.elem);
-  //console.log("heloo");
+
   const arrow = ">";
   const handleremove = () => {
     props.handleremove(props.elem.id);
@@ -11,7 +10,7 @@ export const CartCard = (props) => {
     <React.Fragment>
       <div className={styles.container}>
         <div>
-          <img src={props.elem.data.image} />
+          <img src={props.elem.data.image} alt="" />
         </div>
         <div>
           <div className={styles.name}>{props.elem.data.name}</div>

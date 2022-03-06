@@ -14,12 +14,10 @@ const cartSlice = createSlice({
       const newItem = action.payload;
       state.items.push(newItem);
       state.changed = true;
-      console.log("entered into addItemToCart", state);
+
     },
     removeItem(state, action) {
-      console.log(action.payload, "this is fron cart-slice.js");
-      const index = state.items.findIndex((ele) => ele.id == action.payload);
-      console.log(index);
+      const index = state.items.findIndex((ele) => ele.id === action.payload);
       state.items.splice(index, 1);
     },
   },

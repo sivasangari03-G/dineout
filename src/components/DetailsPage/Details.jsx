@@ -14,11 +14,11 @@ export const Details = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [data, setData] = useState(location.state);
-  console.log(location.state, data);
+
   const arrow = ">";
   const addToCartHandler = (parameter) => {
     const id_date = new Date();
-    // console.log(id_date.getTime());
+
     const newData_ = { data, ...parameter, id: id_date };
     dispatch(cartActions.addItemToCart(newData_));
     navigate("/");
@@ -36,7 +36,7 @@ export const Details = () => {
             {data.address}
             {arrow} {data.name}
           </div>
-          <img src={data.image}></img>
+          <img src={data.image} alt="" />
           <div className={styles.info}>
             <div>
               <div className={styles.restName}>{data.name}</div>
@@ -54,7 +54,7 @@ export const Details = () => {
             </div>
           </div>
           <div className={styles.dineoutPay}>
-            <img src="https://im1.dineout.co.in/images/uploads/mailer/2019/Jul/11/gp-logo.png?tr=tr:n-medium" />
+            <img src="https://im1.dineout.co.in/images/uploads/mailer/2019/Jul/11/gp-logo.png?tr=tr:n-medium" alt="" />
 
             <div>
               Combine any offer with Dineout Pay to <b>save up to 10%</b> more
@@ -65,7 +65,7 @@ export const Details = () => {
             <div>About</div>
             <p>{data.about}</p>
             <div className={styles.features}>
-              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_30.png" />
+              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_30.png" alt="" />
               <div>
                 <div className={styles.featuresName}>COUSINE</div>
                 <div className={styles.featuresDetails}>
@@ -74,28 +74,28 @@ export const Details = () => {
               </div>
             </div>
             <div className={styles.features}>
-              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_5.png" />
+              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_5.png" alt="" />
               <div>
                 <div className={styles.featuresName}>TYPE</div>
                 <div>{data.type.join(",")}</div>
               </div>
             </div>
             <div className={styles.features}>
-              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/grouprupee.png" />
+              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/grouprupee.png" alt="" />
               <div>
                 <div className={styles.featuresName}>AVERAGE COST</div>
                 <div>{data.averageCost}</div>
               </div>
             </div>
             <div className={styles.features}>
-              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_3.png" />
+              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_3.png" alt="" />
               <div>
                 <div className={styles.featuresName}>BESTSELLING ITEMS</div>
                 <div>{data.bestSellingItems.join(",")}</div>
               </div>
             </div>
             <div className={styles.features}>
-              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_2.png" />
+              <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jun/19/group_2.png" alt="" />
               <div>
                 <div className={styles.featuresName}>FACILITIES & FEATURES</div>
               </div>
@@ -110,7 +110,7 @@ export const Details = () => {
             </ul>
           </div>
           <div className={styles.viewmore} onClick={navToBookATable}>
-            <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/1/chainoutlets.png" />
+            <img src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/1/chainoutlets.png" alt="" />
             <div>View more outlets of this chain in {data.city}</div>
             <div className={styles.viewmorearr}>{arrow}</div>
           </div>
@@ -120,14 +120,14 @@ export const Details = () => {
             </div>
             <div>
               <div>
-                <img src="https://im1.dineout.co.in/images/uploads/mailer/2019/Jun/19/group_74.png" />
+                <img src="https://im1.dineout.co.in/images/uploads/mailer/2019/Jun/19/group_74.png" alt="" />
                 <div>
                   <div>Call Us</div>
                   <div>{data.callUs[0]}</div>
                 </div>
               </div>
               <div>
-                <img src="https://im1.dineout.co.in/images/uploads/mailer/2019/Jun/19/group_74.png" />
+                <img src="https://im1.dineout.co.in/images/uploads/mailer/2019/Jun/19/group_74.png" alt="" />
                 <div>
                   <div>Call the restaurant</div>
                   <div>{data.callUs[1]}</div>

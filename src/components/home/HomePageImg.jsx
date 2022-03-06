@@ -1,14 +1,9 @@
 import React, { useContext } from "react";
 import styles from "./homePageImg.module.css";
-import SearchIcon from "@mui/icons-material/Search";
-
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
 import { FeaturedResContext } from "../../contexts/FeaturedResContext";
 import CountrySelect from "./CountrySelect";
 export const HomePageImg = () => {
   const allPlaces = useContext(FeaturedResContext);
-  // console.log("allPlaces",allPlaces);
   const data = [];
 
   allPlaces.map((elem) =>

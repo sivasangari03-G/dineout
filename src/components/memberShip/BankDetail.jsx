@@ -22,7 +22,7 @@ export const BankDetail = () => {
 	const [upiHover,setUpiHover] = useState(false);
 	const handleTick = () => {
 		setTick(!tick);
-		console.log("rick", !tick);
+		
 	};
 	useEffect(() => {
 		craditI !== "" && expiryI !== "" && cvvI.length === 3 && tick === true

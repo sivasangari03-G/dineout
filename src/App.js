@@ -11,18 +11,9 @@ function App() {
 	useEffect(() => {
 		dispatch(fetchCartData());
 	}, [dispatch]);
-	console.log(cart);
-	useEffect(() => {
-		//console.log("is data being sent?");
-		//----------------------------------------------thunk----------------------------------------------
-		// if (initial) {
-		//   initial = false;
-		//   return;
-		// }
-		//console.log("setting data");
-		if (cart.changed) dispatch(sendCartData(cart));
 
-		//----------------------------------------------thunk----------------------------------------------
+	useEffect(() => {
+		if (cart.changed) dispatch(sendCartData(cart));
 	}, [cart, dispatch]);
 	return (
 		<div className="App">

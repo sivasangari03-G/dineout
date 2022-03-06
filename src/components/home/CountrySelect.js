@@ -7,23 +7,22 @@ import styles from "./Country.module.css";
 export default function CountrySelect() {
   const [data, setData] = React.useState();
   React.useEffect(() => {
-    fetch("http://localhost:8000/posts", {
-      method: "GET",
-      headers: { "Content-type": "application/json;charset=UTF-8" },
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json);
-      })
-      .catch((err) => console.log(err));
+    fetch("https://fake-json-server2.herokuapp.com/posts", {
+		method: "GET",
+		headers: { "Content-type": "application/json;charset=UTF-8" },
+	})
+		.then((response) => response.json())
+		.then((json) => {
+			setData(json);
+		});
   }, []);
   const navigate = useNavigate();
   const handleNavigate = (param) => {
     const elem = data.find((e) => e.id === param);
     navigate(`/details:${elem.name}`, { state: elem });
-    // console.log(param);
+
   };
-  console.log(data);
+
   return (
     <Autocomplete
       id="country-select-demo"
@@ -51,7 +50,7 @@ export default function CountrySelect() {
             }}
           >
             <div>
-              <img className={styles.image} src={option.image} />
+              <img className={styles.image} src={option.image} alt="" />
             </div>
             <div>
               <span> {option.name}</span>,<span>{option.address}</span>

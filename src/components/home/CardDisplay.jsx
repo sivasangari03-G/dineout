@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./restaurantNearYou.module.css";
 
 export const CardDisplay = (props) => {
-	console.log(props.elem);
 	const navigate = useNavigate();
 	const handleNavigate = () => {
 		navigate(`/details:${props.elem.name}`, { state: props.elem });

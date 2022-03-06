@@ -6,7 +6,6 @@ const Restaurant = ({ x }) => {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate(`/details:${x.name}`, { state: x });
-    console.log(x);
   };
   return (
     <div className={style.card} onClick={handleNavigate}>
