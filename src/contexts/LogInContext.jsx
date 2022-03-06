@@ -33,6 +33,7 @@ export const LogInContextProvider = ({ children }) => {
 	const handleLogOutBtn = () => {
 		setData(false);
 		localStorage.setItem("value", false);
+		window.location.reload();
 		setLogInWithNum("");
 	};
 
