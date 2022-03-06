@@ -75,3 +75,30 @@
   color: #636363;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 900px) {
+  .header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-left: 8%;
+    margin-right: 8%;
+    height: 150px;
+    align-items: center;
+  }
+
+  .container {
+    margin-left: 12%;
+    margin-right: 12%;
+    display: grid;
+
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    padding-top: 50px;
+  }
+  .card1 {
+    background: white;
+    padding: 25px;
+    color: #636363;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+}

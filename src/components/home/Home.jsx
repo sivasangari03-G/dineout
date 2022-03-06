@@ -11,14 +11,21 @@ import { FeaturedRes } from "./FeaturedRes";
 import { DropDownNavbar } from "../navbar/DropDownNavbar";
 
 import { FinestRes } from "./FinestRes";
-
+// window.addEventListener(() => {
+//   console.log(window.scrollY, window.scrollX);
+// });
 export const Home = () => {
   const resData = useContext(RestaurantNeatYouContext);
-
+  const [show, setShow] = useState(false);
+  window.addEventListener("scroll", function (e) {
+    console.log(window.scrollY);
+    if (window.scrollY > 333 && show == false) setShow(true);
+    else if (window.scrollY < 333 && show == false) setShow(false);
+  });
   return (
     <div>
       <Navbar />
-      {/* <DropDownNavbar /> */}
+      {show && <DropDownNavbar />}
       <HomePageImg />
       <BestOffers />
       {resData && <RestaurantNearYou />}
