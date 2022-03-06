@@ -68,7 +68,7 @@
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 1300px) {
+/* @media only screen and (max-width: 1300px) {
   .ccs {
     width: 81%;
     text-align: center;
@@ -79,7 +79,7 @@
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 900px) {
   .ccs {
     width: 81%;
     text-align: center;
@@ -102,4 +102,4 @@
     cursor: pointer;
     z-index: 10;
   }
-}
+} */
