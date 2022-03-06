@@ -28,10 +28,14 @@ export const Home = () => {
       {show && <DropDownNavbar />}
       <HomePageImg />
       <BestOffers />
-      {resData && <RestaurantNearYou />}
-      <FeaturedRes />
+      {show && <RestaurantNearYou />}
+      {!show && <RestaurantNearYou />}
+      {show && <FeaturedRes />}
+      {!show && <FeaturedRes />}
       <EightFacility />
-      <FinestRes />
+
+      {show && <FinestRes />}
+      {!show && <FinestRes />}
       <AvailableIn />
     </div>
   );

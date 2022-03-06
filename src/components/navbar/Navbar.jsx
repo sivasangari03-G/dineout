@@ -7,6 +7,7 @@ import styles from "./navbar.module.css";
 import { LogInNavbar } from "./LogInNavbar";
 import { useDispatch, useSelector } from "react-redux";
 import { set_city } from "../../Redux/Restaurants/actions";
+import { AutoComplete } from "./AutoComplete";
 
 export const Navbar = () => {
   const places = useContext(NavbarContext);
@@ -28,18 +29,7 @@ export const Navbar = () => {
           />
         </div>
         <div>
-          <Autocomplete
-            disablePortal
-            onChange={(event, value) => dispatch(set_city(value))}
-            id="combo-box-demo"
-            options={places}
-            sx={{
-              width: 220,
-            }}
-            renderInput={(params) => (
-              <TextField {...params} placeholder="Location" size="small" />
-            )}
-          />
+          <AutoComplete />
         </div>
         <div>
           <Link className={styles.anchorNavbar} to="/">
