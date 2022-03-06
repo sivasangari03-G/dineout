@@ -63,7 +63,7 @@ export const LogInNavbar = () => {
 						</div>
 
 						<button
-							className={styles.handleModelContinueBtn}
+							id={styles.handleModelContinueBtn}
 							onClick={handleModelContinue}
 						>
 							Continue

@@ -16,10 +16,11 @@
 .loginModel {
   background-color: white;
   border: 0;
+  outline:none;
   border-radius: 3;
   color: white;
-  height: 52vh;
-  width: 30%;
+  height: 50vh;
+  width: 27%;
   margin: 5% auto;
   padding: 0 30px;
   border-radius: 6px;
@@ -46,6 +47,7 @@
 }
 
 .inputfield {
+  width: 100%;
   padding-top: 20px;
   color: black;
 }
@@ -58,15 +60,16 @@
   color: black !important;
 }
 
-.handleModelContinueBtn {
+#handleModelContinueBtn {
   width: 100%;
   background-color: #ff645a;
   color: white;
   text-align: center;
-  padding: 1px;
+  padding: 10px;
   border: 0;
   cursor: pointer;
   margin-top: 25px;
+  font-size: 16px;
 }
 .lineTextLine {
   display: flex;
