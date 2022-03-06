@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FeaturedResContext } from "../../contexts/FeaturedResContext";
 import styles from "./featuredRes.module.css";
 import Slider from "react-slick";
@@ -8,6 +8,7 @@ import "../dineoutPassport/carousel.css";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import { Link } from "react-router-dom";
 import { CardDisplay } from "./CardDisplay";
+import { useSelector } from "react-redux";
 export const FeaturedRes = () => {
   // const settings = {
   // 	focusOnSelect: true,
@@ -23,18 +24,28 @@ export const FeaturedRes = () => {
     slidesToShow: 4,
     slidesToScroll: 3,
   };
-  const featuredData = useContext(FeaturedResContext);
+  let city = useSelector((store) => store.RestaurantReducer.city);
+  const [resData, setResData] = useState([]);
+  console.log(city, "from home page");
+  useEffect(() => {
+    fetch(
+      `https://fake-json-server2.herokuapp.com/products?city=${city}&featured=true`
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setResData([...json]);
+      })
+      .catch((err) => console.log(err));
+  }, [city]);
 
-  const data = featuredData.filter((elem) => {
-    return elem.featured === true;
-  });
-  console.log(data);
+  const array = resData.splice(0, 4);
   return (
     <div className={styles.featuredResMain}>
       <h2 className={styles.featuredResTitle}>Featured Restaurants</h2>
       <div style={{ margin: "30px auto", width: "100%" }}>
         <Slider {...settings}>
-          {data.map((elem) => {
+          {array.map((elem) => {
             return (
               <div key={elem.id}>
                 <div key={elem.id} className={styles.restaurantCartsMain}>
