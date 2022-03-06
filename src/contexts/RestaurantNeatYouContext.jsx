@@ -14,7 +14,7 @@ export const RestaurantNeatYouContextProvider = ({ children }) => {
     })
       .then((response) => response.json())
       .then((json) => {
-        // console.log(json);
+        console.log(json);
         display(json);
       })
       .catch((err) => console.log(err));

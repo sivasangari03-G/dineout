@@ -1,20 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./finestRes.module.css";
 import { FeaturedResContext } from "../../contexts/FeaturedResContext";
 import { Link } from "react-router-dom";
 import { CardDisplay } from "./CardDisplay";
+import { useSelector } from "react-redux";
 
 export const FinestRes = () => {
-  const finestRestaurants = useContext(FeaturedResContext);
-  // console.log("finestRestaurants", finestRestaurants);
-  const data = finestRestaurants.filter((elem) => {
-    return elem.pureveg === true;
-  });
-  // console.log(data);
-  const array = [];
-  data.map((elem) => (elem.id <= 7 ? array.push(elem) : 0));
+  let city = useSelector((store) => store.RestaurantReducer.city);
+  const [resData, setResData] = useState([]);
+  console.log(city, "from home page");
+  useEffect(() => {
+    fetch(
+      `https://fake-json-server2.herokuapp.com/products?city=${city}&pureveg=true`
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setResData([...json]);
+      })
+      .catch((err) => console.log(err));
+  }, [city]);
 
-  // console.log(array);
+  const array = resData.splice(0, 4);
   return (
     <div className={styles.finestRoot}>
       <div>
