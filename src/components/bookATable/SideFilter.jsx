@@ -4,15 +4,16 @@ import style from "./SideFilter.module.css"
 import { set_cuisine_filter, set_quick_filter, set_type_filter } from "../../Redux/Restaurants/actions"
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import { FaMinus } from "react-icons/fa"
 
 
 const SideFilter = () => {
-  const { dineoutpay} = useParams()
+  const { dineoutpay } = useParams()
 
 
   const dispatch = useDispatch()
   useEffect(() => {
-    
+
     if (dineoutpay === "dineoutpay") {
       dispatch(set_quick_filter(dineoutpay))
       localStorage.setItem("quick_filter", dineoutpay)
@@ -26,7 +27,7 @@ const SideFilter = () => {
       dispatch(set_quick_filter(""))
       localStorage.setItem("quick_filter", "")
     }
-  },[dineoutpay])
+  }, [dineoutpay])
   let cuisine_filter = useSelector(store => store.RestaurantReducer.cuisine_filter)
   let type_filter = useSelector(store => store.RestaurantReducer.type_filter)
   let quick_filter = useSelector(store => store.RestaurantReducer.quick_filter)
@@ -35,9 +36,9 @@ const SideFilter = () => {
   return (
     <div className={style.side_filter_div}>
 
-      <h3>Quick Fitlers</h3>
+      <h4>Quick Fitlers <span><FaMinus /></span></h4>
 
-      <hr />
+      <input type="text" placeholder='Search' />
 
       <div className={style.quick}>
         <div>
@@ -57,9 +58,10 @@ const SideFilter = () => {
         </div>
       </div>
 
-      <h3>Cuisines</h3>
-
       <hr />
+      <h4>Cuisines <span><FaMinus /></span></h4>
+
+      <input type="text" placeholder='Search For Cuisines' />
       <div className={style.cuisine}>
 
         <div>
@@ -95,9 +97,9 @@ const SideFilter = () => {
 
       <br />
 
-      <h3>Tags</h3>
-
       <hr />
+      <h4>Tags <span> <FaMinus /></span></h4>
+      <input type="text" placeholder='Search' />
 
       <div className={style.type}>
 

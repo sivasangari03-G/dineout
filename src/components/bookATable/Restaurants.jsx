@@ -55,7 +55,7 @@ const Restaurants = ({ city }) => {
 
 
     async function get1() {
-        let res = await fetch(`https://fake-json-server2.herokuapp.com/products?city=${city}&cuisine_like=${cuisine_filter}&type_like=${type_filter}&quick_like=${quick_filter}`)
+        let res = await fetch(`https://fake-json-server2.herokuapp.com/posts?city=${city}&cuisine_like=${cuisine_filter}&type_like=${type_filter}&quick_like=${quick_filter}`)
         let res1 = await res.json()
         dispatch(set_max_page(Math.ceil(res1.length / 9)))
         localStorage.setItem("maxpage", maxpage)
@@ -64,7 +64,7 @@ const Restaurants = ({ city }) => {
         localStorage.setItem("page", page)
     }
     async function get() {
-        let res = await fetch(`https://fake-json-server2.herokuapp.com/products?_page=${page}&_limit=9&_sort=${sort}&city=${city}&cuisine_like=${cuisine_filter}&type_like=${type_filter}&quick_like=${quick_filter}`)
+        let res = await fetch(`https://fake-json-server2.herokuapp.com/posts?_page=${page}&_limit=9&_sort=${sort}&city=${city}&cuisine_like=${cuisine_filter}&type_like=${type_filter}&quick_like=${quick_filter}`)
         let res1 = await res.json()
         dispatch(get_data(res1))
     }
