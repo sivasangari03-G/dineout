@@ -70,21 +70,47 @@
 	padding-left: 20px;
 }
 
-.debitText:hover {
+/* .debitText:hover {
 	color: #333;
 	border-left: 5px solid #ff7b73;
 	height: fit-content;
 	background-color: #fff;
 	padding-bottom: 20px;
-}
+} */
 
-.upiText:hover {
+.debitTexthover {
+	padding-top: 20px;
+	padding-left: 20px;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
 	color: #333;
 	border-left: 5px solid #ff7b73;
 	height: fit-content;
 	background-color: #fff;
 	padding-bottom: 20px;
 }
+.upiTextHover {
+	padding-top: 20px;
+	padding-left: 20px;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #333;
+	border-left: 5px solid #ff7b73;
+	height: fit-content;
+	background-color: #fff;
+	padding-bottom: 20px;
+}
+/* .upiText:hover {
+	color: #333;
+	border-left: 5px solid #ff7b73;
+	height: fit-content;
+	background-color: #fff;
+	padding-bottom: 20px;
+} */
 .enterMainDebit {
 	/* width: 150%; */
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2.6px;

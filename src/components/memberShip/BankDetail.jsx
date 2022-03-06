@@ -18,6 +18,8 @@ export const BankDetail = () => {
 	const [expiryI, setExpiryI] = useState("");
 	const [cvvI, setCvvI] = useState("");
 	const [tick, setTick] = useState(false);
+	const [css, setCss] = useState(false);
+	const [upiHover,setUpiHover] = useState(false);
 	const handleTick = () => {
 		setTick(!tick);
 		console.log("rick", !tick);
@@ -34,10 +36,15 @@ export const BankDetail = () => {
 			: setUpiFinal(false);
 	}, [upiI]);
 	const handleDebitCard = () => {
+		setCss(true);
+		setUpiHover(false);
+
 		setDebit(true);
 		setUpi(false);
 	};
 	const handleUpi = () => {
+		setUpiHover(true);
+		setCss(false);
 		setUpi(true);
 		setDebit(false);
 	};
@@ -52,7 +59,6 @@ export const BankDetail = () => {
 			navigate("/");
 		} else {
 			alert("Payment Failed!");
-
 		}
 	};
 	const handlePaymentUpi = () => {
@@ -61,9 +67,8 @@ export const BankDetail = () => {
 			navigate("/");
 		} else {
 			alert("Payment Failed!");
-
 		}
-	}
+	};
 	var rupee = data.rupees;
 	var rupees = parseInt(rupee);
 
@@ -90,13 +95,33 @@ export const BankDetail = () => {
 			</div>
 			<div className={styles.bankMain}>
 				<div className={styles.debitupileft}>
-					<div onClick={handleDebitCard} className={styles.debitText}>
-						<CreditCardIcon />
-						<div>Debit/Credit card</div>
-					</div>
-					<div onClick={handleUpi} className={styles.upiText}>
-						<DoubleArrowIcon /> <div>UPI</div>
-					</div>
+					{css ? (
+						<div
+							onClick={handleDebitCard}
+							className={styles.debitTexthover}
+						>
+							<CreditCardIcon />
+							<div>Debit/Credit card</div>
+						</div>
+					) : (
+						<div
+							onClick={handleDebitCard}
+							className={styles.debitText}
+						>
+							<CreditCardIcon />
+							<div>Debit/Credit card</div>
+						</div>
+					)}
+
+					{upiHover ? (
+						<div onClick={handleUpi} className={styles.upiTextHover}>
+							<DoubleArrowIcon /> <div>UPI</div>
+						</div>
+					) : (
+						<div onClick={handleUpi} className={styles.upiText}>
+							<DoubleArrowIcon /> <div>UPI</div>
+						</div>
+					)}
 				</div>
 
 				<div>
