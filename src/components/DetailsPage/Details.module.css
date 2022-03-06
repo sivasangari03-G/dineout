@@ -152,3 +152,35 @@
   text-align: right;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 1300px) {
+  .mainPage {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background: rgb(245, 244, 244);
+  }
+  .featuresList {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-row-gap: 10px;
+  }
+  .viewmore {
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    background-image: linear-gradient(to right, white, rgb(212, 241, 248));
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    width: 100%;
+    color: #636363;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .mainPage {
+    display: grid;
+    grid-template-columns: 90%;
+    background: rgb(245, 244, 244);
+  }
+}
