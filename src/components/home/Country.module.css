@@ -30,17 +30,17 @@
   background: white;
   border-radius: 3px;
 }
-/* @media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
   .widthh {
-    width: 800px;
+    width: 600px;
 
     border-radius: 3px;
   }
 }
 @media only screen and (max-width: 600px) {
   .widthh {
-    width: 300px;
+    width: 200px;
     background: rgb(255, 255, 255);
     border-radius: 3px;
   }
-} */
+}

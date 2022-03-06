@@ -68,9 +68,9 @@
   border-radius: 5px;
 }
 
-/* @media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
   .ccs {
-    width: 81%;
+    width: 98%;
     text-align: center;
     display: grid;
     grid-template-columns: 55% 45%;
@@ -79,9 +79,9 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .ccs {
-    width: 81%;
+    width: 65%;
     text-align: center;
     display: grid;
     grid-template-columns: 55% 45%;
@@ -90,16 +90,16 @@
   }
   .inputSearchBtn {
     margin: 9px;
-    width: 70px;
+    width: 50px;
     padding: 10px 10px;
 
     background-color: #ff645a;
     color: white;
     border: 0;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: bold;
     cursor: pointer;
     z-index: 10;
   }
-} */
+}
