@@ -11,7 +11,7 @@ export const FinestRes = () => {
   console.log(city, "from home page");
   useEffect(() => {
     fetch(
-      `https://fake-json-server2.herokuapp.com/products?city=${city}&pureveg=true`
+      `https://fake-json-server2.herokuapp.com/products?city=${city}&featured=true`
     )
       .then((response) => response.json())
       .then((json) => {
