@@ -3,7 +3,7 @@ import styles from "./browsePlans.module.css"
 import {Link} from "react-router-dom"
 export const BrowsePlans = () => {
 	return (
-		<Link to="/dineoutpassport">
+		<Link to="/membershipplans">
 			<div className={styles.browsePlansWhite}>
 				<div className={styles.browsePlanRoot}>
 					<div className={styles.browsePlanText}>BROWSE PLANS</div>
