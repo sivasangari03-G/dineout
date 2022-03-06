@@ -1,6 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
 import Autocomplete from "@mui/material/Autocomplete";
 import styles from "./Country.module.css";
 export default function CountrySelect() {
@@ -16,6 +17,12 @@ export default function CountrySelect() {
       })
       .catch((err) => console.log(err));
   }, []);
+  const navigate = useNavigate();
+  const handleNavigate = (param) => {
+    const elem = data.find((e) => e.id === param);
+    navigate(`/details:${elem.name}`, { state: elem });
+    // console.log(param);
+  };
   console.log(data);
   return (
     <Autocomplete
@@ -37,7 +44,12 @@ export default function CountrySelect() {
             srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
             alt=""
           /> */}
-          <div className={styles.gridd}>
+          <div
+            className={styles.gridd}
+            onClick={() => {
+              handleNavigate(option.id);
+            }}
+          >
             <div>
               <img className={styles.image} src={option.image} />
             </div>
