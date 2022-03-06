@@ -29,7 +29,7 @@
   background: white;
   border-radius: 3px;
 }
-@media only screen and (max-width: 1300px) {
+/* @media only screen and (max-width: 1300px) {
   .widthh {
     width: 500px;
     background: white;
@@ -42,4 +42,4 @@
     background: rgb(255, 255, 255);
     border-radius: 3px;
   }
-}
+} */

@@ -9,7 +9,8 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import { Link } from "react-router-dom";
 import { CardDisplay } from "./CardDisplay";
 import { useSelector } from "react-redux";
-export const FeaturedRes = () => {
+import { Flat } from "./Flat";
+export const FeaturedRes = ({flat}) => {
   // const settings = {
   // 	focusOnSelect: true,
   // 	infinite: true,
@@ -39,28 +40,34 @@ export const FeaturedRes = () => {
       .catch((err) => console.log(err));
   }, [city]);
 
-  const array = resData.splice(0, 4);
+ 
   return (
-    <div className={styles.featuredResMain}>
-      <h2 className={styles.featuredResTitle}>Featured Restaurants</h2>
-      <div style={{ margin: "30px auto", width: "100%" }}>
-        <Slider {...settings}>
-          {array.map((elem) => {
-            return (
-              <div key={elem.id}>
-                <div key={elem.id} className={styles.restaurantCartsMain}>
-                  <div>
-                    <div
-                      style={{
-                        border: "1px solid rgba(0, 0, 0, 0.05)",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                      }}
-                    >
-                      <CardDisplay elem={elem} />
-                    </div>
+		<div className={styles.featuredResMain}>
+			<h2 className={styles.featuredResTitle}>Featured Restaurants</h2>
+			<div style={{ margin: "30px auto", width: "100%" }}>
+				<Slider {...settings}>
+					{resData.map((elem) => {
+						return (
+							<div key={elem.id}>
+								<div
+									key={elem.id}
+									className={styles.restaurantCartsMain}
+								>
+									<div>
+										<div
+											style={{
+												// border: "1px solid rgba(0, 0, 0, 0.05)",
+												marginLeft: "10px",
+												marginRight: "10px",
+											}}
+										>
+											<CardDisplay
+												elem={elem}
+												flat={<Flat />}
+											/>
+										</div>
 
-                    {/* <div className={styles.imgMain}>
+										{/* <div className={styles.imgMain}>
                       <img
                         className={styles.resImg}
                         src={elem.image}
@@ -77,41 +84,21 @@ export const FeaturedRes = () => {
                       <div className={styles.rating}>{elem.rating}</div>
                     </div> */}
 
-                    <div
-                      style={{
-                        borderBottom: "1px solid rgba(0, 0, 0, 0.05)",
-                        marginLeft: "20px",
-                        marginRight: "20px",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        color: "#54BD8A",
-                        fontWeight: "600",
-                        display: "flex",
-                        alignItems: "center",
-                        paddingLeft: "20px",
-                        marginTop: "10px",
-                        paddingBottom: "20px",
-                      }}
-                    >
-                      <LocalOfferIcon fontSize="small" />
-                      <div
-                        style={{
-                          paddingLeft: "10px",
-                          fontSize: "14px",
-                        }}
-                      >
-                        Flat 10% Off the Total Bill
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-    </div>
+										{/* <div
+											style={{
+												borderBottom:
+													"1px solid rgba(0, 0, 0, 0.05)",
+												marginLeft: "20px",
+												marginRight: "20px",
+											}}
+										></div> */}
+									</div>
+								</div>
+							</div>
+						);
+					})}
+				</Slider>
+			</div>
+		</div>
   );
 };
