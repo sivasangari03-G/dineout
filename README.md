@@ -31,8 +31,10 @@ To deploy this project run, First clone the project to local computer and start 
 Now visit the deployed site : "link"
   
 ## Screenshots
-- Landing Page
+### 1. Landing Page
+
 ![landingPage](https://user-images.githubusercontent.com/77038735/157514710-b1f37e83-0f06-4bb1-9e70-5d9dbdf87a34.PNG)
+
 - Login Page
 ![login](https://user-images.githubusercontent.com/77038735/157522538-b3e70972-9c81-47bd-a481-a45a0224eaf6.jpg)
 - Book a Table Page
