@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Dineout (Group Project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dineout is a table booking platform helping customers to do table booking in their favourite restaurants for free and help them get great discounts. To build this clone we have used React, Redux, Material-UI along with amazing Teammates. This was our first "React" collaborative Project at MASAI, to which we're grateful for.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+   - React
+   - Redux
+   - Material-UI
 
-### `npm start`
+  
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Login
+- Search Restaurants in 3 different Cities
+- Browse Plans for premium membership
+- Apply coupon
+- cancel Bookings
+- Payment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  
+## Deployment
 
-### `npm test`
+To deploy this project run, First clone the project to local computer and start following the below steps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  git clone https://github.com/sivasangari03-G/dineout.git
+  cd dineout/server
+  npm run server
+```
+Now visit the deployed site : "link"
+  
+## Screenshots
+- Landing Page
+![landingPage](https://user-images.githubusercontent.com/77038735/157514710-b1f37e83-0f06-4bb1-9e70-5d9dbdf87a34.PNG)
+- Login Page
+![bookatable](https://user-images.githubusercontent.com/77038735/157520231-5dfb6139-5a9e-482f-8984-9e6711b89a5a.jpg)
+- Book a Table Page
+![profile](https://user-images.githubusercontent.com/77038735/157521871-0c1647d7-b4de-4101-af14-11b35152ac7d.jpg)
+- Profile Page
+![browseplans](https://user-images.githubusercontent.com/77038735/157521125-5b5da73f-b69f-451a-8e2d-fae48b12f2fe.jpg)
+- Dineout Passport Page
+![membership](https://user-images.githubusercontent.com/77038735/157520970-3944bbb0-575c-4d8d-82b8-480eda20337c.jpg)
+- Membership Plans Page
+![promocode](https://user-images.githubusercontent.com/77038735/157520589-990bf8f5-b3af-46a8-b813-eb941ec264f6.jpg)
+- Apply Promocode Page
+![payment](https://user-images.githubusercontent.com/77038735/157520492-e36f2934-9139-49c8-a5ba-f512c865b3e4.jpg)
+- Payment Page
+## Limitations
 
-### `npm run build`
+Some pages are not responsive yet , those pages are might not be properly visible on small screen devices. (Recommended Resolution: 1440 x 900)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## End Notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In this project, we tried to achieve near to perfect clone. This entire journey of this construct week has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. Most of the features are added and the functionality of the website is achieved.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+  
+## Team members and contributors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Developers
+- [Sivasangari](https://github.com/sivasangari03-G)
+- [Sudhanshu](https://github.com/sudhanshu2710)
+- [Ritesh Kumar](https://github.com/riteshsingla36)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
