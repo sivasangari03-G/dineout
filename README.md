@@ -34,18 +34,20 @@ Now visit the deployed site : "link"
 - Landing Page
 ![landingPage](https://user-images.githubusercontent.com/77038735/157514710-b1f37e83-0f06-4bb1-9e70-5d9dbdf87a34.PNG)
 - Login Page
-![bookatable](https://user-images.githubusercontent.com/77038735/157520231-5dfb6139-5a9e-482f-8984-9e6711b89a5a.jpg)
+![login](https://user-images.githubusercontent.com/77038735/157522538-b3e70972-9c81-47bd-a481-a45a0224eaf6.jpg)
 - Book a Table Page
-![profile](https://user-images.githubusercontent.com/77038735/157521871-0c1647d7-b4de-4101-af14-11b35152ac7d.jpg)
+![bookatable](https://user-images.githubusercontent.com/77038735/157522756-0b1e3cdf-a17f-4b0a-9aa1-8f8b5623d803.jpg)
 - Profile Page
-![browseplans](https://user-images.githubusercontent.com/77038735/157521125-5b5da73f-b69f-451a-8e2d-fae48b12f2fe.jpg)
+
+![profile](https://user-images.githubusercontent.com/77038735/157522786-7882abfa-6c8e-4857-9ac1-d374580c65d0.jpg)
 - Dineout Passport Page
-![membership](https://user-images.githubusercontent.com/77038735/157520970-3944bbb0-575c-4d8d-82b8-480eda20337c.jpg)
+![dineoutPassport](https://user-images.githubusercontent.com/77038735/157522858-4c3c74bc-4ac0-4f4c-bbd8-4f4f6cb5abe4.jpg)
 - Membership Plans Page
-![promocode](https://user-images.githubusercontent.com/77038735/157520589-990bf8f5-b3af-46a8-b813-eb941ec264f6.jpg)
+![membership](https://user-images.githubusercontent.com/77038735/157522918-aa77f21f-4ce1-45b8-80be-071c2f4dc6c7.jpg)
 - Apply Promocode Page
-![payment](https://user-images.githubusercontent.com/77038735/157520492-e36f2934-9139-49c8-a5ba-f512c865b3e4.jpg)
+![promocode](https://user-images.githubusercontent.com/77038735/157522963-54e8d271-c117-42dc-8981-2c08be5f0411.jpg)
 - Payment Page
+![payment](https://user-images.githubusercontent.com/77038735/157523006-58a62f80-837c-4f4d-993a-e56a0ea1200c.jpg)
 ## Limitations
 
 Some pages are not responsive yet , those pages are might not be properly visible on small screen devices. (Recommended Resolution: 1440 x 900)
