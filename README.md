@@ -1,6 +1,6 @@
 # Dineout (Group Project)
 
-Dineout is a table booking platform helping customers to do table booking in their favourite restaurants for free and help them get great discounts. To build this clone we have used React, Redux, Material-UI along with amazing Teammates. This was our first "React" collaborative Project at MASAI, to which we're grateful for.
+Dineout is a table booking platform helping customers to do table booking in their favourite restaurants for free and help them to get great discounts. To build this clone we have used React, Redux, Material-UI along with amazing Teammates. This was our first "React" collaborative Project at MASAI, to which we're grateful for.
 
 ## Tech Stack
 
