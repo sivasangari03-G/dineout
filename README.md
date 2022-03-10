@@ -77,7 +77,7 @@ In this project, we tried to achieve near to perfect clone. This entire journey 
 
 Developers
 - [Sivasangari](https://github.com/sivasangari03-G)
-- [Sudhanshu](https://github.com/sudhanshu2710)
+- [Sudhanshu Singh](https://github.com/sudhanshu2710)
 - [Ritesh Kumar](https://github.com/riteshsingla36)
 
 
