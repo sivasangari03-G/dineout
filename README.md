@@ -25,7 +25,7 @@ To deploy this project run, First clone the project to local computer and start 
 
 ```bash
   git clone https://github.com/sivasangari03-G/dineout.git
-  cd dineout
+  cd dineout/
   npm start
 ```
 Now visit the deployed site : "https://dineout-1.netlify.app/"
