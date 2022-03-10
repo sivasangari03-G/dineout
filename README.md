@@ -28,7 +28,7 @@ To deploy this project run, First clone the project to local computer and start 
   cd dineout/server
   npm run server
 ```
-Now visit the deployed site : "link"
+Now visit the deployed site : "https://dineout-1.netlify.app/"
   
 ## Screenshots
 ### 1. Landing Page
